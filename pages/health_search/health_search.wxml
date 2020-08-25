@@ -1,0 +1,6 @@
+<!--pages/health01/health01.wxml-->
+<Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
+  <block wx:if="{{tabs[0].isActive}}">0</block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:else="{{tabs[2].isActive}}">2</block>
+</Tabs>

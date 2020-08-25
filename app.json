@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/health_siji/health_siji",
+    "pages/health/health",
+    "pages/medicine/medicine",
+    "pages/method/method",
+    "pages/forum/forum",
+    "pages/personal/personal",
+    "pages/search/search",
+    "pages/health_search/health_search",
+    "pages/health_jiqi/health_jiqi",
+    "pages/health_renqun/health_renqun"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#86ff9c",
+    "navigationBarTitleText": "本草善养",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#86ff9c"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/health/health",
+        "text": "养护首页",
+        "iconPath": "img/_health.png",
+        "selectedIconPath": "img/health.png"
+      },
+      {
+        "pagePath": "pages/medicine/medicine",
+        "text": "医药科普",
+        "iconPath": "img/_medicine.png",
+        "selectedIconPath": "img/medicine.png"
+      },
+      {
+        "pagePath": "pages/method/method",
+        "text": "个性化",
+        "iconPath": "img/_method.png",
+        "selectedIconPath": "img/method.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "养生论坛",
+        "iconPath": "img/_forum.png",
+        "selectedIconPath": "img/forum.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "img/_personal.png",
+        "selectedIconPath": "img/personal.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

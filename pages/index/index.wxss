@@ -1,0 +1,78 @@
+Page{
+ font-size: 16rpx;
+}
+
+.container { 
+  height: 100%; 
+  display: flex; 
+  padding: 0; 
+  box-sizing: border-box;
+} 
+
+.login-img{
+  margin-top:200rpx;
+  width: 300rpx;
+  height: 300rpx;
+ }
+
+ /*表单内容*/ 
+ .login-from { 
+  margin-top:40px; 
+  width: 500rpx;
+  height:100%; 
+} 
+.labelView{
+  height: 100rpx;
+  width: 100%;
+  font-size: 70rpx;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.line{
+  border: 4rpx solid #cdcdcd;
+}
+.inputView{
+  margin-top: 20rpx;
+  height: 200rpx;
+  width: 100%;
+  border: 4rpx solid #cdcdcd;
+  border-radius: 10rpx;
+}
+
+input{
+  height: 100rpx;
+}
+
+ .inputText {
+  margin-left: 22rpx; 
+  align-content: center;
+  justify-content: center;
+  color: black; 
+  font-size: 40rpx;
+ }
+
+ /*按钮*/ 
+ .loginBtnView { 
+  width: 100%; 
+  height: auto;
+  margin-top: 30rpx; 
+  margin-bottom: 0px; 
+  padding-bottom: 0px; 
+ } 
+
+button{
+  position:relative;
+  display:block;
+  margin:auto;
+  padding:14px;
+  box-sizing:border-box;
+  font-size:20px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5rpx;
+  overflow:hidden;
+  color:#000000;
+  background-color: var(--themeColor);
+ }

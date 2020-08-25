@@ -1,0 +1,19 @@
+<SearchInput></SearchInput>
+<view class="menu_container">
+    <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:for-item="menu">
+      <navigator url="{{menu.url}}" >
+        <image class="menu_icon" src="{{menu.src}}" />
+        <text class="menu_name">{{menu.name}}</text>
+      </navigator>
+    </view>
+</view>
+<view class="index_swiper">
+  <swiper autoplay indicator-dots circular indicator-active-color="#1afa29">
+    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+      <navigator>
+        <image mode="widthFix" src="{{item.image_src}}">
+        </image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>

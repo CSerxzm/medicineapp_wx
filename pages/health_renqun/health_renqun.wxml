@@ -1,0 +1,8 @@
+<!--节气养生模块-->
+<Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:else="{{tabs[2].isActive}}">2</block>
+</Tabs>
