@@ -1,4 +1,4 @@
-
+import{request} from "../../request/health.js";
 Page({
 
   /**
@@ -27,52 +27,39 @@ Page({
         isActive:false
       },
     ],
-    sijiList:[
-      {
-        id:"0",
-        image:"http://47.102.155.48:8080/pic_medicineapp/yu.jpg",
-        editTime:"2018/12/12 12:23:23",
-        title:"冬季羊肉可以养生吗,可以不可以，有你决定啊，想吃就吃",
-        views:100
-      },
-      {
-        id:"1",
-        image:"http://47.102.155.48:8080/pic_medicineapp/yu.jpg",
-        editTime:"2018/12/12 12:23:23",
-        title:"冬季羊肉可以养生吗",
-        views:100
-      },
-      {
-        id:"2",
-        image:"http://47.102.155.48:8080/pic_medicineapp/yu.jpg",
-        editTime:"2018/12/12 12:23:23",
-        title:"冬季羊肉可以养生吗",
-        views:100
-      },
-      {
-        id:"3",
-        image:"http://47.102.155.48:8080/pic_medicineapp/yu.jpg",
-        editTime:"2018/12/12 12:23:23",
-        title:"冬季羊肉可以养生吗",
-        views:100
+    sijiList:[],
+    index:0
+  },
+  get_items(index){
+    request({
+      url: '/getheathbytype',
+      data:{
+        main_type:1,
+        sub_type:index
       }
-    ]
+    })
+    .then(result=>{
+      this.setData({
+        sijiList:result.data
+      });
+      console.log(result);
+    })
   },
 
   handleItemChange(e){
-    //console.log(e.detail.index);
     const index=e.detail.index;
+    this.get_items(index);
     let {tabs}=this.data;
     tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
     this.setData({
       tabs
-    })
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.get_items(0);
   },
 
   /**

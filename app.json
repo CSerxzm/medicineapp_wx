@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/health_siji/health_siji",
+    "pages/forum/forum",
+    "pages/comment/comment",
+    "pages/forum_add/forum_add",
+    "pages/personal/personal",
     "pages/health/health",
+    "pages/health_siji/health_siji",
+    "pages/health_info/health_info",
     "pages/medicine/medicine",
     "pages/method/method",
-    "pages/forum/forum",
-    "pages/personal/personal",
     "pages/search/search",
     "pages/health_search/health_search",
     "pages/health_jiqi/health_jiqi",
@@ -17,7 +20,6 @@
     "navigationBarBackgroundColor": "#86ff9c",
     "navigationBarTitleText": "本草善养",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
     "backgroundColor": "#86ff9c"
   },
   "tabBar": {

@@ -1,8 +1,54 @@
-<!--节气养生模块-->
+<!--人群养生模块-->
 <Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
+  <!--儿童-->
   <block wx:if="{{tabs[0].isActive}}">
-    
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="health_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="health_info_wrap">
+          <view class="health_title">{{item.title}}</view>
+          <view class="health_time">时间:{{item.editTime}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
+        </view>
+      </navigator>
+    </view>
   </block>
-  <block wx:elif="{{tabs[1].isActive}}">1</block>
-  <block wx:else="{{tabs[2].isActive}}">2</block>
+  <!--中年-->
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="health_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="health_info_wrap">
+          <view class="health_title">{{item.title}}</view>
+          <view class="health_time">时间:{{item.editTime}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <!--老年-->
+  <block wx:if="{{tabs[2].isActive}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="health_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="health_info_wrap">
+          <view class="health_title">{{item.title}}</view>
+          <view class="health_time">时间:{{item.editTime}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
 </Tabs>

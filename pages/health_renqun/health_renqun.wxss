@@ -1,1 +1,45 @@
-/* pages/health_renqun/health_renqun.wxss */
+.health_item{
+  display: flex;
+  height:240rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  box-shadow: 4rpx 1rpx 1rpx #86ff9c;
+}
+
+.health_img_wrap{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+image{
+  width: 100%;
+  border-radius:10rpx;
+}
+
+.health_info_wrap{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.health_title{
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  font-weight: bold;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding-left: 10px;
+}
+
+.health_time, .health_views{
+  color: #696969;
+  font-size: 32rpx;
+  text-align: left;
+  padding-left: 10px;
+}

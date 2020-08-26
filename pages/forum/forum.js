@@ -1,18 +1,30 @@
-// pages/forum/forum.js
+import{request} from "../../request/health.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    forumList:[],
+    index:0
+  },
+  get_items(){
+    request({
+      url: "/getforums"
+    })
+    .then(result=>{
+      this.setData({
+        forumList:result.data
+      });
+      console.log(result);
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.get_items();
   },
 
   /**
@@ -26,7 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.get_items();
   },
 
   /**

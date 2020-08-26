@@ -1,3 +1,4 @@
+import{request} from "../../request/health.js";
 Page({
 
   /**
@@ -20,17 +21,35 @@ Page({
         name:"老年",
         isActive:false
       },
-    ]
+    ],
+    sijiList:[],
+    index:0
+  },
+  get_items(index){
+    request({
+      url: '/getheathbytype',
+      data:{
+        main_type:2,
+        sub_type:index
+      }
+    })
+    .then(result=>{
+      this.setData({
+        sijiList:result.data
+      });
+      console.log(result);
+    });
   },
 
   handleItemChange(e){
     //console.log(e.detail.index);
     const index=e.detail.index;
+    this.get_items(index);
     let {tabs}=this.data;
     tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
     this.setData({
       tabs
-    })
+    });
   },
 
   /**

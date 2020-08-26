@@ -1,2 +1,40 @@
-<!--pages/forum/forum.wxml-->
-<text>pages/forum/forum.wxml</text>
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<block wx:for="{{forumList}}" wx:key="index">
+  <navigator url="/pages/comment/comment?id={{item.id}}">
+    <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+    <view class="all" id="{{index}}">
+        <view class="head">
+          <image class="image_head" src="{{item.forum_id}}" />
+          <!-- 包裹两行文字 -->
+          <view class="nameandtime">
+            <text class="name">{{item.name}}</text>
+            <text class="time">{{filter.getDateTime(item.editTime)}}</text>
+          </view>
+        </view>
+        <view class="line"></view>
+        <view class="content">
+          <text>{{item.content}}</text>
+        </view>
+        <view class="footer">
+          <view class="biaoqian_view">
+            <view>
+              <image id="biaoqian" mode="aspectFill" class="iconfont icon-biaoqian"/>
+            </view>
+            <view>{{item.keyword}}</view>
+          </view>
+          <view class="liulan_view">
+            <view>
+              <image id="liulan" mode="aspectFill" class="iconfont icon-pinglun"/>
+            </view>
+            <view>{{item.comments}}</view>
+          </view>
+        </view>
+      </view>
+  </navigator>
+</block>
+
+<view class="pageadd">
+  <navigator url="/pages/forum_add/forum_add">
+    <image id="tianjia" class="iconfont icon-tianjia"/>
+  </navigator>
+</view>

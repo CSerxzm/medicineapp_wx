@@ -1,0 +1,59 @@
+.all{
+  margin:10rpx;
+  padding:10rpx;
+}
+
+.title{
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+
+.contentview{
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  min-height: 600rpx;
+  padding:10rpx;
+  width: 95%;
+  overflow:auto;
+  border-radius: 20rpx;
+  border: 5rpx solid var(--themeColor);
+}
+
+.label{
+  margin-top: 20rpx;
+}
+
+input{
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  padding:10rpx;
+  border: 5rpx solid var(--themeColor);
+}
+
+.buttonview{
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.buttontemp{
+  width: 30%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+  background-color:var(--themeColor);
+}
+
+.buttonspace{
+  width: 30%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+}
+
+
+ 

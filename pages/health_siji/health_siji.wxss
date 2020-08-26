@@ -1,6 +1,9 @@
 .health_item{
   display: flex;
-  border-bottom: 1rpx solid #86ff9c;
+  height:240rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  box-shadow: 4rpx 1rpx 1rpx #86ff9c;
 }
 
 .health_img_wrap{
@@ -11,7 +14,6 @@
 }
 image{
   width: 100%;
-  padding:10rpx;
   border-radius:10rpx;
 }
 
@@ -32,18 +34,12 @@ image{
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
-.health_time{
-  color: var(--themeColor);
-  font-size: 32rpx;
-  text-align: left;
   padding-left: 10px;
 }
 
-.health_views{
-  color: var(--themeColor);
+.health_time, .health_views{
+  color: #696969;
   font-size: 32rpx;
-  text-align: right;
-  padding-right: 10px;
+  text-align: left;
+  padding-left: 10px;
 }

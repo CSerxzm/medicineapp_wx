@@ -1,4 +1,4 @@
-// pages/health02/health02.js
+import{request} from "../../request/health.js";
 Page({
 
   /**

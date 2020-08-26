@@ -1,2 +1,39 @@
-<!--pages/medicine/medicine.wxml-->
-<text>pages/medicine/medicine.wxml</text>
+<!--医药科普-->
+<Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
+  <!--中药材科普-->
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
+      <navigator class="item_item" url="/pages/item_info/item_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="item_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="item_info_wrap">
+          <view class="item_name">{{item.name}}</view>
+          <view class="item_taboos">{{item.taboos}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <!--中药方科普-->
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
+      <navigator class="prescr_item" url="/pages/item_info/item_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="item_prescr_name">
+          <view class="prescr_name">{{item.name}}</view>
+        </view>
+        <!--右侧的标题-->
+        <view class="item_prescr_info">
+          <view class="prescr_compose">组成：{{item.compose}}</view>
+          <view class="prescr_source">出处：{{item.source}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <!--老年-->
+  <block wx:if="{{tabs[2].isActive}}">
+    2
+  </block>
+</Tabs>

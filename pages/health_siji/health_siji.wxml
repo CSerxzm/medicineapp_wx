@@ -1,8 +1,10 @@
 <!--节气养生模块-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
 <Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
+  <!--春季-->
   <block wx:if="{{tabs[0].isActive}}">
-    <view class="first_tb">
-      <navigator class="health_item" wx:for="{{sijiList}}" wx:index="{{id}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -10,15 +12,16 @@
         <!--右侧的标题-->
         <view class="health_info_wrap">
           <view class="health_title">{{item.title}}</view>
-          <view class="health_time">{{item.editTime}}</view>
-          <view class="health_views">{{item.views}}</view>
+          <view class="health_time">时间:{{filter.getDateTime(item.editTime)}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
         </view>
       </navigator>
     </view>
   </block>
+  <!--夏季-->
   <block wx:if="{{tabs[1].isActive}}">
-    <view class="first_tb">
-      <navigator class="health_item" wx:for="{{sijiList}}" wx:index="{{id}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -26,15 +29,16 @@
         <!--右侧的标题-->
         <view class="health_info_wrap">
           <view class="health_title">{{item.title}}</view>
-          <view class="health_time">{{item.editTime}}</view>
-          <view class="health_views">{{item.views}}</view>
+          <view class="health_time">时间:{{filter.getDateTime(item.editTime)}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
         </view>
       </navigator>
     </view>
   </block>
+  <!--秋季-->
   <block wx:if="{{tabs[2].isActive}}">
-    <view class="first_tb">
-      <navigator class="health_item" wx:for="{{sijiList}}" wx:index="{{id}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -42,15 +46,16 @@
         <!--右侧的标题-->
         <view class="health_info_wrap">
           <view class="health_title">{{item.title}}</view>
-          <view class="health_time">{{item.editTime}}</view>
-          <view class="health_views">{{item.views}}</view>
+          <view class="health_time">时间:{{filter.getDateTime(item.editTime)}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
         </view>
       </navigator>
     </view>
   </block>
+  <!--冬季-->
   <block wx:if="{{tabs[3].isActive}}">
-    <view class="first_tb">
-      <navigator class="health_item" wx:for="{{sijiList}}" wx:index="{{id}}">
+    <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -58,8 +63,8 @@
         <!--右侧的标题-->
         <view class="health_info_wrap">
           <view class="health_title">{{item.title}}</view>
-          <view class="health_time">{{item.editTime}}</view>
-          <view class="health_views">{{item.views}}</view>
+          <view class="health_time">时间:{{filter.getDateTime(item.editTime)}}</view>
+          <view class="health_views">浏览:{{item.views}}</view>
         </view>
       </navigator>
     </view>

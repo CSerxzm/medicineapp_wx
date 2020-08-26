@@ -1,6 +1,6 @@
 <view class="container">
   <view class="login-icon">
-    <image class="login-img" src="../../img/app.jpg"></image>
+    <image class="login-img" src="../../img/app.png"></image>
   </view> 
 
   <view class="login-from">
@@ -10,13 +10,18 @@
     <view class="inputView">
       <!--账号-->
       <view>
-        <input class="inputText" placeholder="请输入账号" bindinput="nameInput" /> 
+        <input class="inputText" placeholder="请输入账号" bindinput="nameInput" value="{{name}}"/> 
       </view>
       <view class="line"></view>
       <!--密码--> 
       <view> 
-        <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+        <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" value="{{password}}"/> 
       </view> 
+    </view>
+    <view class="radioview">
+       <switch type="checkbox" bindchange="radioChange" checked="{{flag}}">
+         <text class="radiotext">记住密码</text>
+        </switch>
     </view>
     <!--按钮--> 
     <view class="loginBtnView"> 

@@ -1,2 +1,29 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="mine-wrapper">
+
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image style="border-radius:50%;" src="{{'../../img/app.png'}}"></image>
+      </view>
+      <view class="name">
+        <text wx:if="{{user}}">{{user}}</text>
+        <text wx:else bindtap="toLogin">注册/登录</text>
+      </view>
+    </view>
+  </view>
+  <view class="list-wrapper">
+    <view class="alllists" wx:for="{{menuitems}}" wx:key="menu_for">
+        <navigator url="{{item.url}}" class="lists">
+        <view class='content'>
+          <view class="listimg">
+            <image id="icon" mode="aspectFill" class="{{item.class}}"></image>
+          </view>
+          <view class="listtext">{{item.text}}</view>
+        </view>
+        </navigator>
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+    </view>
+  </view>
+
+</view>

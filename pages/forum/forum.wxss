@@ -1,1 +1,123 @@
 /* pages/forum/forum.wxss */
+.all {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  border-radius: 20rpx;
+  border: 3rpx solid #E0E3DA;
+  box-shadow:5rpx 5rpx 5rpx 5rpx #E0E3DA;
+  background-color: #ffffff;
+  margin: 30rpx;
+  /* padding使得文字和图片不至于贴着边框 */
+  padding: 20rpx;
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+}
+
+/* 图片 */
+.image_head{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.nameandtime{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10rpx;
+  padding: 2rpx;
+}
+
+.name {
+  width: 500rpx;
+  margin-left: 25rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.time {
+  font-size: 25rpx;
+  padding-left: 30rpx;
+  word-break: break-all;
+  color: #7a7878;
+}
+/*分割线*/
+.line{
+ margin-top: 10rpx;
+ background: #86ff9c;
+ width:100%;
+ height: 4rpx;
+}
+/*正文部分*/
+.content{
+  width: 100%;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  font-size:28rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  display: -webkit-box;
+  text-overflow:ellipsis;
+}
+/*尾部部分*/
+.footer{
+  width:100%;
+  margin-top:25rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.biaoqian_view{
+  width:600rpx;
+  height:60rpx;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+
+#biaoqian{
+  width:100%;
+  height:100%;
+  font-size: 45rpx;
+  color: #86ff9c;
+}
+
+.liulan_view{
+  width:600rpx;
+  height:60rpx;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-left: 300rpx;
+}
+
+#liulan{
+  width:100%;
+  height:100%;
+  font-size: 45rpx;
+  color: #86ff9c;
+}
+
+/*发布动态界面*/
+.pageadd{
+  position:fixed;
+  bottom:0;
+  width:80rpx;
+  margin:20rpx;
+  right:20rpx;
+}
+
+#tianjia{
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 80rpx;
+  color: coral;
+}

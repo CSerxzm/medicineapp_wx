@@ -1,0 +1,45 @@
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class="all">
+  <view class="head">    
+          <image class="image_head" src="../../img/app.png" />
+          <!-- 包裹两行文字 -->
+          <view class="nameandtime">
+            <text class="name">{{content.name}}</text>
+            <text class="time">{{filter.getDateTime(content.editTime)}}</text>
+          </view>
+  </view>
+  <view class="content">
+   {{content.content}}
+  </view>
+  <view class="addcomment">
+    <form  bindsubmit="formSubmit">
+      <view class="inputView">
+        <input name="content"  value="{{comment}}" class="addcomment_input" placeholder="留下你的足迹"/>
+      </view>
+      <view class="butView">
+        <button class="btn1"  formType="submit">发送</button>
+      </view>
+    </form>
+  </view>
+  <view class="breakup">
+    <view class="breakup_icon">评论</view>
+    <view class="breakup_line"></view>
+  </view>
+  <view class="comments">
+    <!--评论开始-->
+    <view class="comment" wx:for="{{commentslist}}" wx:key="id">
+        <view class="head">    
+          <image class="image_content" src="../../img/app.png"/>
+          <!-- 包裹两行文字 -->
+          <view class="nameandtime">
+            <text class="name">{{item.name}}</text>
+            <text class="time">{{filter.getDateTime(item.editTime)}}</text>
+          </view>
+        </view>
+        <view class="comment_content">
+          <text>{{item.content}}</text>
+        </view>
+    </view>
+    <!--评论结束-->
+  </view>
+</view>

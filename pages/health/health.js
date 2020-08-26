@@ -36,7 +36,7 @@ Page({
   },
 
   getSwiperList(){
-    request({url:"http://47.102.155.48:8080/medicineapp/getgoods"})
+    request({url:"/getimages"})
     .then(result=>{
       this.setData({
         swiperList:result.data.message

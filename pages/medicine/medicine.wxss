@@ -1,1 +1,93 @@
-/* pages/medicine/medicine.wxss */
+.item_item{
+  display: flex;
+  height:240rpx;
+  padding: 15rpx;
+  box-shadow: 4rpx 1rpx 1rpx #86ff9c;
+}
+
+.item_img_wrap{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+image{
+  width: 100%;
+  border-radius:10rpx;
+}
+
+.item_info_wrap{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item_name{
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  font-weight: bold;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding-left: 10px;
+}
+
+.item_taboos{
+  color: #696969;
+  font-size: 32rpx;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/*中药方科普*/
+.prescr_item{
+  display: flex;
+  height:150rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  box-shadow: 4rpx 1rpx 1rpx #86ff9c;
+}
+
+.item_prescr_name{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prescr_name{
+  width: 100%;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50rpx;
+}
+/*
+        <view class="item_prescr_info">
+          <view class="prescr_compose">组成：{{item.compose}}</view>
+          <view class="prescr_source">出处：{{item.source}}</view>
+        </view>*/
+.item_prescr_info{
+  margin: auto;
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+
+.prescr_compose , .prescr_source{
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding-left: 10px;
+}
