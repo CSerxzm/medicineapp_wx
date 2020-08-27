@@ -6,32 +6,27 @@ Page({
    */
   data: {
     forumList:[],
-    index:0
+    index:"",
+    page:{
+      pageIndex:1,
+      totalSize:""
+    }
   },
   get_items(){
     request({
-      url: "/getforums"
+      url: "/getforums",
+      data:{
+        pageIndex:this.data.page.pageIndex
+      }
     })
     .then(result=>{
-      this.setData({
-        forumList:result.data
-      });
       console.log(result);
+      this.setData({
+        forumList:[...this.data.forumList,...result.data.data],
+        /*页码相关*/
+        page:result.data.page,
+      });
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.get_items();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
   },
 
   /**
@@ -42,37 +37,16 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    if(this.data.page.pageIndex>=this.data.page.totalSize){
+      //没有下一页数据
+      console.log("没有下一页");
+    }else{
+      //console.log("有下一页");
+      this.data.page.pageIndex++;
+      this.get_items();
+    }
   }
 })

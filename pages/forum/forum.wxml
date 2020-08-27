@@ -4,10 +4,10 @@
     <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
     <view class="all" id="{{index}}">
         <view class="head">
-          <image class="image_head" src="{{item.forum_id}}" />
+          <image class="image_head" src="{{item.user.image}}" />
           <!-- 包裹两行文字 -->
           <view class="nameandtime">
-            <text class="name">{{item.name}}</text>
+            <text class="name">{{item.user.name}}</text>
             <text class="time">{{filter.getDateTime(item.editTime)}}</text>
           </view>
         </view>

@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/health/health",
     "pages/forum/forum",
     "pages/comment/comment",
     "pages/forum_add/forum_add",
     "pages/personal/personal",
-    "pages/health/health",
     "pages/health_siji/health_siji",
     "pages/health_info/health_info",
     "pages/medicine/medicine",

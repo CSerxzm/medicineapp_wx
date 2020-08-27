@@ -1,10 +1,10 @@
 <wxs module="filter" src="../../utils/util.wxs"></wxs>
 <view class="all">
   <view class="head">    
-          <image class="image_head" src="../../img/app.png" />
+          <image class="image_head" src="{{content.user.image}}" />
           <!-- 包裹两行文字 -->
           <view class="nameandtime">
-            <text class="name">{{content.name}}</text>
+            <text class="name">{{content.user.name}}</text>
             <text class="time">{{filter.getDateTime(content.editTime)}}</text>
           </view>
   </view>
@@ -29,10 +29,10 @@
     <!--评论开始-->
     <view class="comment" wx:for="{{commentslist}}" wx:key="id">
         <view class="head">    
-          <image class="image_content" src="../../img/app.png"/>
+          <image class="image_content" src="{{item.user.image}}"/>
           <!-- 包裹两行文字 -->
           <view class="nameandtime">
-            <text class="name">{{item.name}}</text>
+            <text class="name">{{item.user.name}}</text>
             <text class="time">{{filter.getDateTime(item.editTime)}}</text>
           </view>
         </view>
