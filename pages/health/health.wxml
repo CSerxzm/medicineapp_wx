@@ -1,19 +1,101 @@
-<SearchInput></SearchInput>
-<view class="menu_container">
-    <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:for-item="menu">
-      <navigator url="{{menu.url}}" >
-        <image class="menu_icon" src="{{menu.src}}" />
-        <text class="menu_name">{{menu.name}}</text>
-      </navigator>
+<view class="page">
+  <SearchInput></SearchInput>
+  <view class="menu_container">
+      <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:for-item="menu">
+        <navigator url="{{menu.url}}" >
+          <image class="menu_icon" src="{{menu.src}}" />
+          <text class="menu_name">{{menu.name}}</text>
+        </navigator>
+      </view>
+  </view>
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular indicator-active-color="#1afa29">
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator>
+          <image mode="widthFix" src="{{item.image_src}}">
+          </image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="weather">
+    <view>
+    <view class='date'>今天</view>
+      <view class='location'>{{weather.basic.location}}/{{weather.basic.parent_city}}</view>
+      <view class='tmp'>{{weather.today.tmp_min}}℃~{{weather.today.tmp_max}}℃</view>
+      <view class='cond_txt'>{{weather.today.cond_txt_d}}</view>
     </view>
-</view>
-<view class="index_swiper">
-  <swiper autoplay indicator-dots circular indicator-active-color="#1afa29">
-    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-      <navigator>
-        <image mode="widthFix" src="{{item.image_src}}">
-        </image>
-      </navigator>
-    </swiper-item>
-  </swiper>
+    <view>
+      <view class='weather_icon'>
+      <image src='{{weather.todyIcon}}'></image>
+      </view>
+      <view class='lastUpdateDate'>最后更新：{{weather.update}}</view>
+    </view>
+  </view>
+
+  <view class="lineview">
+          <view class="line"></view>
+          <view>
+            <image mode="aspectFill" class="iconfont icon-hua  lineimg"/>
+          </view>
+          <view class="line"></view>
+  </view>
+  
+  <view class="xinzuoview">
+        <view class="xinzuotitle">
+          <view><image mode="aspectFill" class="iconfont icon-xuehua xinzuoimg"/></view>
+          <view class="xinzuoname">{{xinzuo.name}}运势</view>
+          <view><image mode="aspectFill" class="iconfont icon-xuehua xinzuoimg"/></view>
+        </view>
+          <!--健康运势开始-->
+            <view class="staritem">
+              <view class="startext">健康指数:</view>
+              <view class="startext">{{xinzuo.health}}</view>
+              <view class="stars">
+                <block wx:if='{{xinzuo.health>0}}'>
+                  <block wx:for='{{xinzuo.health/10-0}}' wx:key='un'>
+                      <image class="star" src="../../img/xin.png"></image>
+                  </block>
+                </block>
+              </view>
+            </view>
+            <view class="staritem">
+              <view class="startext">爱情指数:</view>
+              <view class="startext">{{xinzuo.love}}</view>
+              <view class="stars">
+                <block wx:if='{{xinzuo.love>0}}'>
+                  <block wx:for='{{xinzuo.love/10-0}}' wx:key='un'>
+                      <image class="star" src="../../img/xin.png"></image>
+                  </block>
+                </block>
+              </view>
+            </view>
+            <view class="staritem">
+              <view class="startext">工作指数:</view>
+              <view class="startext">{{xinzuo.work}}</view>
+              <view class="stars">
+                <block wx:if='{{xinzuo.work>0}}'>
+                  <block wx:for='{{xinzuo.work/10-0}}' wx:key='un'>
+                      <image class="star" src="../../img/xin.png"></image>
+                  </block>
+                </block>
+              </view>
+            </view>
+            <view class="staritem">
+                <view class="startext">财富指数:</view>
+                <view class="startext">{{xinzuo.money}}</view>
+                <view class="stars">
+                  <block wx:if='{{xinzuo.money>0}}'>
+                    <block wx:for='{{xinzuo.money/10-0}}' wx:key='un'>
+                        <image class="star" src="../../img/xin.png"></image>
+                    </block>
+                  </block>
+                </view>
+            </view>
+          <!---爱情运势运势结束-->
+        <view>
+          <view class="summarytext">{{xinzuo.summary}}</view>
+        </view>
+  </view>
 </view>

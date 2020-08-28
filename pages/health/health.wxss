@@ -1,15 +1,9 @@
 /* pages/health/health.wxss */
-/*轮播图*/
-.index_swiper{
+.page{
+  width: 100%;
+  height: 100%;
+}
 
-}
-.index_swiper swiper{
-  width: 750rpx;
-  height: 431rpx;
-}
-.index_swiper swiper image{
-  width:100%;
-}
 /*导航栏*/
 .menu_container {
   display: flex;
@@ -36,3 +30,129 @@ navigator{
   height: 100rpx;
   padding-bottom: 5px;
 }
+
+/*轮播图*/
+
+.index_swiper swiper{
+  margin: auto 10rpx;
+  height: 431rpx;
+}
+.index_swiper swiper image{
+  width:100%;
+  border-radius: 10rpx;
+}
+
+/*天气预报*/
+.weather{
+  height: 300rpx;
+  margin:10rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 34rpx;
+  box-sizing: border-box;
+ }
+ .weather>view{
+  flex: 1;
+ }
+ .weather>view>view{
+  margin: 15rpx 0;
+ }
+
+ .location,.cond_txt{
+  font-size: 32rpx;
+ }
+ .date,.tmp{
+  font-weight: bold;
+ }
+ .weather_icon{
+  text-align: center;
+  height: 65rpx;
+ }
+ .weather_icon image{
+  width: 180rpx;
+  height: 180rpx;
+ }
+ .lastUpdateDate{
+  font-size: 24rpx;
+  text-align: center;
+  padding-top: 110rpx;
+ }
+  /*分割线*/
+ .line{
+   width:40%;
+   border: 2rpx solid red;
+ }
+
+ .lineview{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: row;
+ }
+
+ .lineimg{
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;
+  color: red;
+ }
+ /*星座运势*/
+ .xinzuoview{
+  height: auto;
+  margin:10rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 34rpx;
+  flex-direction: column;
+ }
+
+ .xinzuotitle{
+   width: 100%;
+   height: auto;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   font-size: 35rpx;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .xinzuoimg{
+   width: 60rpx;
+   height: 60rpx;
+   font-size: 60rpx;
+   color: #86ff9c;
+ }
+
+ .xinzuoname{
+   margin: 20rpx;
+ }
+ .staritem{
+  display: flex;
+  flex-direction: row;
+ }
+
+ .star{
+   width: 30rpx;
+   height:30rpx;
+   margin: 3rpx;
+ }
+ .startext{
+   font-size: 30rpx;
+   padding-left: 20rpx;
+   margin-right: 20rpx;
+ }
+
+ .summarytext{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+ }
+

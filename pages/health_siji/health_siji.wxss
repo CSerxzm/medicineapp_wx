@@ -1,6 +1,7 @@
 .health_item{
   display: flex;
   height:240rpx;
+  padding: 10rpx;
   padding-top: 4rpx;
   padding-bottom: 4rpx;
   box-shadow: 4rpx 1rpx 1rpx #86ff9c;

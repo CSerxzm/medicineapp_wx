@@ -1,6 +1,23 @@
 <!--节气养生模块-->
-<Tabs tabs="{{tabs}}" bindItemChange="handleItemChange">
-  <block wx:if="{{tabs[0].isActive}}">0</block>
-  <block wx:elif="{{tabs[1].isActive}}">1</block>
-  <block wx:else="{{tabs[2].isActive}}">2</block>
-</Tabs>
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="true">
+        <block wx:for="{{tabs}}" wx:key="id">
+            <view class="nav-item {{currentTab == item.id ?'active':''}}"  data-current="{{item.id}}" bindtap="switchNav">{{item.name}}</view>
+        </block>        
+    </scroll-view>
+    <!-- 页面内容 -->
+    <view class="tab">
+      <view class="first_tb"  wx:for="{{jiqiList}}" wx:index="{{id}}">
+        <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+          <view class="health_img_wrap">
+            <image mode="widthFix" src="{{item.image}}"></image>
+          </view>
+          <!--右侧的标题-->
+          <view class="health_info_wrap">
+            <view class="health_title">{{item.title}}</view>
+            <view class="health_time">时间:{{item.editTime}}</view>
+            <view class="health_views">浏览:{{item.views}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>

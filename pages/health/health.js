@@ -1,7 +1,6 @@
 // pages/health/health.js
 import{request} from "../../request/health.js";
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -23,7 +22,30 @@ Page({
         "src":'http://47.102.155.48:8080/pic_medicineapp/renqun.png',
         "url":"/pages/health_renqun/health_renqun"
       }
-    ]
+    ],
+    weather:{
+      update: '',
+      basic:{},
+      today:{},
+      todyIcon:'http://47.102.155.48:8080/pic_medicineapp/weather/100.png',
+    },
+    xinzuo:{
+        "date":20200828,
+        "name":"狮子座",
+        "QFriend":"射手座",
+        "color":"黄色",
+        "datetime":"2020年08月28日",
+        "health":"80",
+        "love":"70",
+        "work":"80",
+        "money":"80",
+        "number":7,
+        "summary":"今天狮子座别忘了跟你身边的小伙伴联络感情哦，如果有机会一起短途的旅行也会给你带来新的活力。跟伴侣的相处也会给你带来踏实稳定的感觉。",
+        "all":"80",
+        "resultcode":"200",
+        "error_code":0,
+        "MeanValue":4
+      }
   },
 
   /**
@@ -32,7 +54,15 @@ Page({
   onLoad: function (options) {
     /*  获得轮播图数据 */
     this.getSwiperList();
-
+    var weather = wx.getStorageSync("weather");
+    if(!weather){
+      this.getLocation();
+    }else{
+      this.setData({
+          weather:weather
+      })
+      wx.setStorageSync('weather',weather);
+    }
   },
 
   getSwiperList(){
@@ -43,52 +73,38 @@ Page({
       });
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
+  getLocation:function(){
+    var that = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        that.getWeatherInfo(latitude, longitude);
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getWeatherInfo: function (latitude, longitude){
+    var _this = this;
+    var key = 'f574bf1fb2784cacacc7fb15ebca5097';
+    var url = 'https://free-api.heweather.com/s6/weather?key='+key+'&location=' + longitude + ',' + latitude;
+      wx.request({
+        url: url, 
+        data: {},
+        success: function (res) {
+          var daily_forecast_today = res.data.HeWeather6[0].daily_forecast[0];
+          var basic = res.data.HeWeather6[0].basic;
+          var update = res.data.HeWeather6[0].update.loc;//更新时间
+          _this.setData({
+            weather:{
+              update:update,
+              basic:basic,
+              today:daily_forecast_today,
+              todyIcon:'http://47.102.155.48:8080/pic_medicineapp/weather/' + daily_forecast_today.cond_code_d+'.png'
+            }
+          });
+        }
+      })
   }
 })
