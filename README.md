@@ -1,6 +1,6 @@
 # medicinaapp_wx
 
-此为小程序，账号中有后端分享代码 [后端分享链接](https://github.com/CSerxzm/medicinaapp)，用于得到后端数据。
+此为小程序，账号中有后端分享代码 [后端分享链接](https://github.com/CSerxzm/medicineapp)，用于得到后端数据。
 
 该小程序为 **本草善养** ，主要功能：
 - 有获得中草药的相关信息
