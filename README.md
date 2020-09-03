@@ -1,4 +1,4 @@
-# medicinaapp_wx
+# medicineapp_wx
 
 此为小程序，账号中有后端分享代码 [后端分享链接](https://github.com/CSerxzm/medicineapp)，用于得到后端数据。
 
