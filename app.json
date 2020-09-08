@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/method/method",
+    "pages/medicine/medicine",
     "pages/health/health",
     "pages/health_jiqi/health_jiqi",
     "pages/index/index",
@@ -9,11 +11,15 @@
     "pages/personal/personal",
     "pages/health_siji/health_siji",
     "pages/health_info/health_info",
-    "pages/medicine/medicine",
-    "pages/method/method",
     "pages/search/search",
     "pages/health_search/health_search",
-    "pages/health_renqun/health_renqun"
+    "pages/health_renqun/health_renqun",
+    "pages/medicine_info/medicine_info",
+    "pages/prescr_info/prescr_info",
+    "pages/rumor_info/rumor_info",
+    "pages/method_food/method_food",
+    "pages/food_info/food_info",
+    "pages/bodytest/bodytest"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -60,7 +66,7 @@
   "sitemapLocation": "sitemap.json",
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于天气的获得" 
+      "desc": "你的位置信息将用于天气的获得"
     }
   }
 }

@@ -1,0 +1,17 @@
+<!--pages/rumor_info/rumor_info.wxml-->
+<view class="info">
+  <view class="name">{{info.title}}</view>
+  <view class="image">
+    <image mode="widthFix" src="{{info.image}}"/>
+  </view>
+  <view class="text"> 
+      <text>{{info.content}}</text>
+  </view>
+  <view class="text"> 
+      <text>出处：{{info.source}}</text>
+  </view>
+  <view class="text"> 
+      <text>{{item.reality=='true'?'真实':'虚假'}}</text>
+  </view>
+</view>
+

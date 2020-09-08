@@ -1,41 +1,43 @@
-// pages/method/method.js
+import{request} from "../../request/health.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menus:[
-      {
-        "name":"体制测试",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/ceshi.png',
-        "url":"/pages/bodytest/bodytest"
+    id:99,
+    info:"",
+  },
+
+  get_info(index){
+    request({
+      url: '/getrumorbyid',
+      data:{
+        id:index
       },
-      {
-        "name":"目标指定",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/mubiao.png',
-        "url":"/pages/health_siji/health_siji"
-      },
-      {
-        "name":"食物养生",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/food.png',
-        "url":"/pages/method_food/method_food"
-      }
-    ],
+    })
+    .then(result=>{
+      this.setData({
+        info:result.data
+      });
+      console.log(result.data);
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      id:options.id
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.get_info(this.data.id);
   },
 
   /**

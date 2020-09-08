@@ -9,17 +9,17 @@ Page({
     menus:[
       {
         "name":"节气养生",
-        "src":'http://47.102.155.48:8080/pic_medicineapp/jiqi.png',
+        "src":'https://fuyuanplant.cn/pic_medicineapp/jiqi.png',
         "url":"/pages/health_jiqi/health_jiqi"
       },
       {
         "name":"四季养生",
-        "src":'http://47.102.155.48:8080/pic_medicineapp/siji.png',
+        "src":'https://fuyuanplant.cn/pic_medicineapp/siji.png',
         "url":"/pages/health_siji/health_siji"
       },
       {
         "name":"人群养生",
-        "src":'http://47.102.155.48:8080/pic_medicineapp/renqun.png',
+        "src":'https://fuyuanplant.cn/pic_medicineapp/renqun.png',
         "url":"/pages/health_renqun/health_renqun"
       }
     ],
@@ -27,7 +27,7 @@ Page({
       update: '',
       basic:{},
       today:{},
-      todyIcon:'http://47.102.155.48:8080/pic_medicineapp/weather/100.png',
+      todyIcon:'https://fuyuanplant.cn/pic_medicineapp/weather/100.png',
     },
     xinzuo:{
         "date":20200828,

@@ -1,0 +1,16 @@
+<!--pages/medicine_info/medicine_info.wxml-->
+<view class="info">
+  <view class="name">{{info.name}}</view>
+  <view class="image">
+    <image mode="widthFix" src="{{info.image}}"/>
+  </view>
+  <view class="text"> 
+      <text>别名：{{info.nickname}}</text>
+  </view>
+  <view class="text"> 
+      <text>作用：{{info.funs}}</text>
+  </view>
+  <view class="text"> 
+      <text>禁忌：{{info.taboos}}</text>
+  </view>
+</view>

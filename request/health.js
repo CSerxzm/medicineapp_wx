@@ -1,5 +1,5 @@
 export const request=(params)=>{
-  const baseurl="http://47.102.155.48:8080/medicineapp";
+  const baseurl="https://fuyuanplant.cn/medicineapp";
   return new Promise((resolve,reject)=>{
     wx-wx.request({
      ...params,

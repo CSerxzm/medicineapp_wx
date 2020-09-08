@@ -1,0 +1,17 @@
+<!--pages/food_info/food_info.wxml-->
+<view class="info">
+  <view class="title">{{info.name}}</view>
+  <view class="image">
+    <image mode="widthFix" src="{{info.image}}"/>
+  </view>
+  <view class="content"> 
+      <text>用料：{{info.compose}}</text>
+  </view>
+  <view class="content"> 
+      <text>做法：{{info.method}}</text>
+  </view>
+  <view class="content"> 
+      <text>功效：{{info.funs}}</text>
+  </view>
+</view>
+

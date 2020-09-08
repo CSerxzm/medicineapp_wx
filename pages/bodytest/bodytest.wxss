@@ -1,0 +1,18 @@
+/* pages/bodytest/bodytest.wxss */
+.all {
+  display: flex;
+  flex-direction:column;
+  border-radius: 20rpx;
+  border: 3rpx solid #E0E3DA;
+  box-shadow:5rpx 5rpx 5rpx 5rpx #E0E3DA;
+  background-color: #ffffff;
+  margin: 30rpx;
+  /* padding使得文字和图片不至于贴着边框 */
+  padding: 20rpx;
+}
+
+.question{
+  float: left;
+  font-size: 30rpx;
+  font-weight: bold;
+}

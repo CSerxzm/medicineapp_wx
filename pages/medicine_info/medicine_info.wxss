@@ -1,0 +1,28 @@
+/* pages/medicine_info/medicine_info.wxss */
+.info{
+  margin:10rpx;
+}
+.name{
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.image{
+  align-items:center;
+  justify-content: center;
+}
+
+image{
+  width: 100%;
+  padding: 10rpx;
+  border-radius:10rpx;
+}
+
+.text{
+  
+}

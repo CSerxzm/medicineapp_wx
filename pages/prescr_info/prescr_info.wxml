@@ -1,0 +1,14 @@
+<!--pages/prescr_info/prescr_info.wxml-->
+<view class="info">
+  <view class="name">{{info.name}}</view>
+  <view class="text"> 
+      <text>组成：{{info.compose}}</text>
+  </view>
+  <view class="text"> 
+      <text>作用：{{info.funs}}</text>
+  </view>
+  <view class="text"> 
+      <text>出处：{{info.source}}</text>
+  </view>
+</view>
+

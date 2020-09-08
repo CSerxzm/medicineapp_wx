@@ -3,7 +3,7 @@
   <!--中药材科普-->
   <block wx:if="{{tabs[0].isActive}}">
     <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
-      <navigator class="item_item" url="/pages/item_info/item_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="item_item" url="/pages/medicine_info/medicine_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="item_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -19,7 +19,7 @@
   <!--中药方科普-->
   <block wx:if="{{tabs[1].isActive}}">
     <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
-      <navigator class="prescr_item" url="/pages/item_info/item_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="prescr_item" url="/pages/prescr_info/prescr_info?id={{item.id}}" hover-class="navigator-hover">
         <!--左侧图片-->
         <view class="item_prescr_name">
           <view class="prescr_name">{{item.name}}</view>
@@ -32,8 +32,20 @@
       </navigator>
     </view>
   </block>
-  <!--老年-->
+  <!--中医药辟谣-->
   <block wx:if="{{tabs[2].isActive}}">
-    2
+    <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
+      <navigator class="item_item" url="/pages/rumor_info/rumor_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="item_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="item_info_wrap">
+          <view class="item_name">{{item.title}}</view>
+          <view class="item_taboos">{{item.reality=='true'?'真实':'虚假'}}</view>
+        </view>
+      </navigator>
+    </view>
   </block>
 </Tabs>

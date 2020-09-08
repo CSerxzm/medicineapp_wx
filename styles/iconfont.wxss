@@ -15,6 +15,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bingo:before {
+  content: "\e634";
+}
+
+.icon-ceshi:before {
+  content: "\e61a";
+}
+
+.icon-shiwu-:before {
+  content: "\ebe8";
+}
+
 .icon-xuehua:before {
   content: "\e607";
 }
@@ -86,4 +98,3 @@
 .icon-duoren-renqun:before {
   content: "\e769";
 }
-

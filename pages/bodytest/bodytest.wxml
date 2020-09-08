@@ -1,0 +1,11 @@
+<!--pages/bodytest/bodytest.wxml-->
+<block wx:for="{{testList}}" wx:key="index">
+      <view class="all">
+        <view class="question">
+          {{item.id}}.{{item.title}}
+        </view>
+        <view class="answer">
+          answer
+        </view>
+      </view>
+</block>
