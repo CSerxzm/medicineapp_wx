@@ -11,8 +11,8 @@
 #### 代码还在更新中。。。
 
 #### 部分界面截图
-![界面截图](./pic/1.jpg)
-![界面截图](./pic/2.jpg)
-![界面截图](./pic/3.jpg)
-![界面截图](./pic/4.jpg)
-![界面截图](./pic/5.jpg)
+<img src="https://github.com/CSerxzm/medicineapp_wx/blob/master/pic/1.jpg" width="40%">
+<img src="https://github.com/CSerxzm/medicineapp_wx/blob/master/pic/2.jpg" width="40%">
+<img src="https://github.com/CSerxzm/medicineapp_wx/blob/master/pic/3.jpg" width="40%">
+<img src="https://github.com/CSerxzm/medicineapp_wx/blob/master/pic/4.jpg" width="40%">
+<img src="https://github.com/CSerxzm/medicineapp_wx/blob/master/pic/5.jpg" width="40%">
