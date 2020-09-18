@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/personal/personal",
+    "pages/index/index",
     "pages/method/method",
     "pages/medicine/medicine",
     "pages/health/health",
     "pages/health_jiqi/health_jiqi",
-    "pages/index/index",
     "pages/forum/forum",
     "pages/comment/comment",
     "pages/forum_add/forum_add",
-    "pages/personal/personal",
     "pages/health_siji/health_siji",
     "pages/health_info/health_info",
     "pages/search/search",

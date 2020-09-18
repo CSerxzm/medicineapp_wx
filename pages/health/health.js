@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperList:[],
+    swiperList:[{},{}],
     menus:[
       {
         "name":"节气养生",
@@ -101,7 +101,7 @@ Page({
               update:update,
               basic:basic,
               today:daily_forecast_today,
-              todyIcon:'http://47.102.155.48:8080/pic_medicineapp/weather/' + daily_forecast_today.cond_code_d+'.png'
+              todyIcon:'https://fuyuanplant.cn/pic_medicineapp/weather/' + daily_forecast_today.cond_code_d+'.png'
             }
           });
         }

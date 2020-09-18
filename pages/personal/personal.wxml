@@ -12,18 +12,51 @@
     </view>
   </view>
   <view class="list-wrapper">
-    <view class="alllists" wx:for="{{menuitems}}" wx:key="menu_for">
-        <navigator url="{{item.url}}" class="lists">
+    <view class="divLine"></view>
+    <view>
+      <button>
         <view class='content'>
           <view class="listimg">
-            <image id="icon" mode="aspectFill" class="{{item.class}}"></image>
+            <image id="icon" mode="aspectFill" class="iconfont icon-yonghu"></image>
           </view>
-          <view class="listtext">{{item.text}}</view>
+          <view class="listtext">个人资料</view>
         </view>
-        </navigator>
-        <!-- 分割线 -->
-        <view class="divLine"></view>
+      </button>
     </view>
+    <view class="divLine"></view>
+    <view>
+      <button>
+        <view class='content'>
+          <view class="listimg">
+            <image id="icon" mode="aspectFill" class="iconfont icon-anquan"></image>
+          </view>
+          <view class="listtext">安全设置</view>
+        </view>
+      </button>
+    </view>
+    <view class="divLine"></view>
+    <view>
+      <button bindtap="clearCache">
+        <view class='content'>
+          <view class="listimg">
+            <image id="icon" mode="aspectFill" class="iconfont icon-qingchu"></image>
+          </view>
+          <view class="listtext">清除缓存</view>
+        </view>
+      </button>
+    </view>
+    <view class="divLine"></view>
+    <view>
+      <button open-type="share">
+        <view class='content'>
+          <view class="listimg">
+            <image id="icon" mode="aspectFill" class="iconfont icon-fenxiang"></image>
+          </view>
+          <view class="listtext">分享好友</view>
+        </view>
+      </button>
+    </view>
+    <view class="divLine"></view>
   </view>
 
 </view>
