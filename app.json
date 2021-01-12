@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/method_food/method_food",
     "pages/personal/personal",
     "pages/index/index",
     "pages/method/method",
@@ -17,7 +18,6 @@
     "pages/medicine_info/medicine_info",
     "pages/prescr_info/prescr_info",
     "pages/rumor_info/rumor_info",
-    "pages/method_food/method_food",
     "pages/food_info/food_info",
     "pages/bodytest/bodytest"
   ],

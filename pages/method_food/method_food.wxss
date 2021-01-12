@@ -24,7 +24,6 @@ image{
   flex:3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .health_title{
@@ -36,13 +35,22 @@ image{
   font-weight: bold;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  padding-left: 10px;
+  -webkit-line-clamp: 1;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
 }
 
-.health_time, .health_views{
+.health_views{
   color: #696969;
   font-size: 32rpx;
-  text-align: left;
-  padding-left: 10px;
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  padding-left: 15rpx;
+  padding-top: 10rpx;
 }
