@@ -5,7 +5,20 @@
           {{item.id}}.{{item.title}}
         </view>
         <view class="answer">
-          answer
+          <radio-group>
+              <label class="radio" wx:for="{{item.answer}}">
+                  <radio value="{{item.value}}"/>{{item.name}}
+              </label>
+          </radio-group>
+        </view>
+      </view>
+</block>
+<block>
+      <view class="footer">
+        <view class="footer-left">第12页/共13页</view>
+        <view class="footer-right">
+          <button class='btn' bindtap='before1' disabled="{{before}}">上一页</button>
+          <button class='btn' bindtap='after1' disabled='{{after}}'>下一页</button>
         </view>
       </view>
 </block>

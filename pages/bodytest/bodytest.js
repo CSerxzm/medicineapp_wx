@@ -8,13 +8,16 @@ Page({
     testList:[
       { id:1,
         title:"你是不是天天比较开心？",
-        answer:"123"},
-      { id:1,
+        answer:[{name:"是",value:1},{name:"不是",value:2}]
+      },
+      { id:2,
         title:"你是不是天天比较开心？",
-        answer:"123"},
-      { id:1,
+        answer:[{name:"你猜猜",value:1},{name:"我不猜",value:2}]
+      },
+      { id:3,
         title:"你是不是天天比较开心？",
-        answer:"123"},
+        answer:[{name:"2345",value:1},{name:"你觉得喃",value:2}]
+      },
     ],
     index:"",
     page:{
