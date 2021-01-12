@@ -3,15 +3,14 @@
   <view class="all">
     <view class="title">发布动态，让更多的人了解。</view>
     <view class="contentview">
-      <textarea  class="content" name="content" id="content" 
-        placeholder="请输入你的动态">
+      <textarea  class="content" name="content" id="content" maxlength='100' placeholder="请输入你的动态">
       </textarea>
     </view>
     <view class="label">
       <text>添加标签：</text>
     </view>
     <view>
-      <input name="label" placeholder="请输入你的标签" required/>
+      <input name="label" maxlength='4' placeholder="请输入你的标签" required/>
     </view>
     <view class="buttonview">
       <button class="buttontemp">返回</button>

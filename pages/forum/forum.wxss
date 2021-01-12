@@ -59,7 +59,7 @@
   width: 100%;
   margin-top: 20rpx;
   display: -webkit-box;
-  font-size:28rpx;
+  font-size:35rpx;
   overflow:hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp:3;
@@ -75,34 +75,36 @@
 }
 
 .biaoqian_view{
-  width:600rpx;
+  width:1800rpx;
   height:60rpx;
+  font-size: 35rpx;
   display: flex;
-  text-align: left;
-  justify-content: center;
+  text-align: center;
+  justify-content: left;
   margin-left: 20rpx;
 }
 
 #biaoqian{
   width:100%;
   height:100%;
-  font-size: 45rpx;
+  font-size: 60rpx;
   color: #86ff9c;
 }
 
 .liulan_view{
-  width:600rpx;
+  width:1200rpx;
   height:60rpx;
+  font-size: 35rpx;
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: left;
   margin-left: 300rpx;
 }
 
 #liulan{
   width:100%;
   height:100%;
-  font-size: 45rpx;
+  font-size: 60rpx;
   color: #86ff9c;
 }
 

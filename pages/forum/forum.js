@@ -12,7 +12,7 @@ Page({
       totalSize:""
     }
   },
-  get_items(){
+  get_items(index){
     request({
       url: "/getforums",
       data:{
@@ -33,7 +33,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.get_items();
+    this.setData({forumList:[],index:"",page:{
+      pageIndex:1,
+      totalSize:""
+    }});
+    this.get_items(0);
   },
 
   /**
@@ -46,7 +50,7 @@ Page({
     }else{
       //console.log("有下一页");
       this.data.page.pageIndex++;
-      this.get_items();
+      this.get_items(this.data.index);
     }
   }
 })
