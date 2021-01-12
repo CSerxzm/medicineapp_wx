@@ -50,7 +50,8 @@ image{
   white-space: pre-line;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   padding-left: 15rpx;
-  padding-top: 10rpx;
+  padding-top: 15rpx;
+  margin-bottom: 15rpx;
 }
