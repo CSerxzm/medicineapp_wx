@@ -6,4 +6,21 @@
           <text class="menu_name">{{menu.name}}</text>
         </navigator>
       </view>
+      <view class="switch">
+        <view class="sex">
+          <i-switch id="sex" value="{{sex}}" size="small" bind:change="onChange" slot="footer">
+            <view slot="open">男</view>
+            <view slot="close">女</view>
+          </i-switch>
+        </view>
+        <view class="bothside">
+          <i-switch id="bothside" value="{{bothside}}" size="small" bind:change="onChange" slot="footer">
+            <view slot="open">前</view>
+            <view slot="close">后</view>
+          </i-switch>
+        </view>
+      </view>
+      <view>
+        <image id="imaPic" src="{{body}}" mode="scaleToFill"/>
+      </view>
   </view>

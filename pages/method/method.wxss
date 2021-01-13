@@ -30,3 +30,22 @@ navigator{
   height: 100rpx;
   padding-bottom: 5px;
 }
+
+.switch{
+  width: 100%;
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-evenly;
+}
+.sex{
+  flex:1;
+}
+.bothside{
+  flex:1;
+}
+#sex{
+  float: left;
+}
+#bothside{
+  float: right;
+}

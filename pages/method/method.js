@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    sex: false,
+    bothside:false,
+    bodyimage:["../../img/man.png","../../img/manZ.png","../../img/woman.png","../../img/womanZ.png"],
+    body:"../../img/man.png",
     menus:[
       {
         "name":"体制测试",
@@ -23,6 +27,24 @@ Page({
       }
     ],
   },
+/**拨动快关 */
+onChange(event){
+    const detail = event.detail;
+    const id = event.currentTarget.id;
+    if(id=='sex'){
+      this.setData({
+        'sex' : detail.value,
+      }); 
+    }else{
+      this.setData({
+        'bothside' : detail.value
+      }); 
+    }
+    const index = this.data.sex*2+this.data.bothside;
+    this.setData({
+      'body':this.data.bodyimage[index]
+    }); 
+},
 
   /**
    * 生命周期函数--监听页面加载
