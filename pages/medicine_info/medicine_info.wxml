@@ -4,13 +4,16 @@
   <view class="image">
     <image mode="widthFix" src="{{info.image}}"/>
   </view>
-  <view class="text"> 
-      <text>别名：{{info.nickname}}</text>
+  <view class="text">
+      <span class="boldtext">别名：</span>
+      <view>{{info.nickname}}</view>
   </view>
-  <view class="text"> 
-      <text>作用：{{info.funs}}</text>
+  <view class="text">
+      <span class="boldtext">作用：</span>
+      <view>{{info.funs}}</view>
   </view>
-  <view class="text"> 
-      <text>禁忌：{{info.taboos}}</text>
+  <view class="text">
+      <span class="boldtext">禁忌：</span>
+      <view>{{info.taboos}}</view>
   </view>
 </view>

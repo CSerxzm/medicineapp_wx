@@ -34,7 +34,7 @@ navigator{
 .switch{
   width: 100%;
   display: flex;
-  padding: 10rpx;
+  margin: 10rpx;
   justify-content: space-evenly;
 }
 .sex{
@@ -48,4 +48,13 @@ navigator{
 }
 #bothside{
   float: right;
+}
+.imageview{
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+#imaPic{
+  width: 700rpx;
+  margin: 0 auto;
 }

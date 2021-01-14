@@ -23,6 +23,9 @@ image{
   border-radius:10rpx;
 }
 
+.boldtext{
+  font-weight: bold !important;
+}
 .text{
-  
+  margin-top: 15rpx;
 }

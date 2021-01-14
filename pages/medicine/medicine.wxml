@@ -11,7 +11,7 @@
         <!--右侧的标题-->
         <view class="item_info_wrap">
           <view class="item_name">{{item.name}}</view>
-          <view class="item_taboos">{{item.taboos}}</view>
+          <view class="item_funs"><span class="boldtext">作用：</span>{{item.funs}}</view>
         </view>
       </navigator>
     </view>
@@ -26,8 +26,8 @@
         </view>
         <!--右侧的标题-->
         <view class="item_prescr_info">
-          <view class="prescr_compose">组成：{{item.compose}}</view>
-          <view class="prescr_source">出处：{{item.source}}</view>
+          <view class="prescr_compose"><span class="boldtext">组成：</span>{{item.compose}}</view>
+          <view class="prescr_source"><span class="boldtext">出处：</span>{{item.source}}</view>
         </view>
       </navigator>
     </view>

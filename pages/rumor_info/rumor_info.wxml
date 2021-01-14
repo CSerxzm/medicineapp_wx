@@ -5,13 +5,16 @@
     <image mode="widthFix" src="{{info.image}}"/>
   </view>
   <view class="text"> 
-      <text>{{info.content}}</text>
+      <span class="boldtext">出处：</span>
+      <view>{{info.source}}</view>
   </view>
-  <view class="text"> 
-      <text>出处：{{info.source}}</text>
+  <view class="text">
+      <span class="boldtext">结论：</span>
+      <view>{{item.reality=='true'?'真实':'虚假'}}</view>
   </view>
-  <view class="text"> 
-      <text>{{item.reality=='true'?'真实':'虚假'}}</text>
+  <view class="text">
+      <span class="boldtext">内容</span>
+      <view>{{info.content}}</view>
   </view>
 </view>
 

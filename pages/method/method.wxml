@@ -9,18 +9,18 @@
       <view class="switch">
         <view class="sex">
           <i-switch id="sex" value="{{sex}}" size="small" bind:change="onChange" slot="footer">
-            <view slot="open">男</view>
-            <view slot="close">女</view>
+            <view slot="open">女</view>
+            <view slot="close">男</view>
           </i-switch>
         </view>
         <view class="bothside">
           <i-switch id="bothside" value="{{bothside}}" size="small" bind:change="onChange" slot="footer">
-            <view slot="open">前</view>
-            <view slot="close">后</view>
+            <view slot="open">后</view>
+            <view slot="close">前</view>
           </i-switch>
         </view>
       </view>
-      <view>
-        <image id="imaPic" src="{{body}}" mode="scaleToFill"/>
+      <view class="imageview">
+        <image id="imaPic" src="{{body}}" mode="scaleToFill" mode="widthFix" />
       </view>
   </view>

@@ -21,7 +21,6 @@ image{
   flex:3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .item_name{
@@ -37,11 +36,20 @@ image{
   padding-left: 10px;
 }
 
-.item_taboos{
+.item_funs{
   color: #696969;
   font-size: 32rpx;
-  text-align: left;
-  padding-left: 10px;
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+  margin-bottom: 15rpx;
 }
 
 /*中药方科普*/
@@ -68,11 +76,7 @@ image{
   text-align: center;
   font-size: 50rpx;
 }
-/*
-        <view class="item_prescr_info">
-          <view class="prescr_compose">组成：{{item.compose}}</view>
-          <view class="prescr_source">出处：{{item.source}}</view>
-        </view>*/
+
 .item_prescr_info{
   margin: auto;
   flex:3;
@@ -91,4 +95,8 @@ image{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   padding-left: 10px;
+}
+
+.boldtext{
+  font-weight: bold !important;
 }
