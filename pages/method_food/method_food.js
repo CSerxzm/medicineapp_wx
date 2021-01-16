@@ -1,4 +1,4 @@
-import{request} from "../../request/health.js";
+import{request} from "../../request/myrequest.js";
 Page({
   /**
    * 页面的初始数据

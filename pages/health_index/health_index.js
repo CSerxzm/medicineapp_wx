@@ -1,5 +1,5 @@
 // pages/health/health.js
-import{request} from "../../request/health.js";
+import{request} from "../../request/myrequest.js";
 Page({
   /**
    * 页面的初始数据
@@ -10,7 +10,7 @@ Page({
       {
         "name":"节气养生",
         "src":'https://fuyuanplant.cn/pic_medicineapp/jiqi.png',
-        "url":"/pages/health_jiqi/health_jiqi"
+        "url":"/pages/health_jieqi/health_jieqi"
       },
       {
         "name":"四季养生",
@@ -54,13 +54,24 @@ Page({
   onLoad: function (options) {
     /*  获得轮播图数据 */
     this.getSwiperList();
+    /* 获得星座数据 */
+    var xinzuo = wx.getStorageSync("xinzuo");
+    if(!xinzuo){
+      this.getxinzuo();
+    }else{
+      this.setData({
+          xinzuo:xinzuo
+      });
+      wx.setStorageSync('xinzuo',xinzuo);
+    }
+    /* 获得天气的数据 */
     var weather = wx.getStorageSync("weather");
     if(!weather){
       this.getLocation();
     }else{
       this.setData({
           weather:weather
-      })
+      });
       wx.setStorageSync('weather',weather);
     }
   },
@@ -79,8 +90,8 @@ Page({
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
+        var latitude = res.latitude;
+        var longitude = res.longitude;
         that.getWeatherInfo(latitude, longitude);
       }
     })
@@ -105,6 +116,24 @@ Page({
             }
           });
         }
-      })
+      });
+  },
+  /**
+   * 获得星座的相关数据
+   */
+  getxinzuo:function(){
+    var _this = this;
+    var key = '6f99d04702c95adfc2c354dfede407b0';
+    var url = 'http://web.juhe.cn:8080/constellation/getAll?type=today&key='+key+'&consName=%E7%8B%AE%E5%AD%90%E5%BA%A7';
+    wx.request({
+      url: url, 
+      data: {},
+      success: function (res) {
+        console.log(res);
+        _this.setData({
+          xinzuo:res.data
+        });
+      }
+    });
   }
 })

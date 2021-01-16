@@ -1,25 +1,24 @@
 {
   "pages": [
-    "pages/medicine/medicine",
-    "pages/health/health",
-    "pages/method/method",
-    "pages/bodytest/bodytest",
-    "pages/forum/forum",
-    "pages/personal/personal",
-    "pages/method_food/method_food",
-    "pages/index/index",
-    "pages/health_jiqi/health_jiqi",
-    "pages/comment/comment",
+    "pages/health_index/health_index",
     "pages/forum_add/forum_add",
-    "pages/health_siji/health_siji",
+    "pages/forum_comment/forum_comment",
+    "pages/forum_index/forum_index",
     "pages/health_info/health_info",
-    "pages/search/search",
-    "pages/health_search/health_search",
+    "pages/health_jieqi/health_jieqi",
     "pages/health_renqun/health_renqun",
-    "pages/medicine_info/medicine_info",
-    "pages/prescr_info/prescr_info",
-    "pages/rumor_info/rumor_info",
-    "pages/food_info/food_info"
+    "pages/health_search/health_search",
+    "pages/health_siji/health_siji",
+    "pages/index/index",
+    "pages/medicine_index/medicine_index",
+    "pages/medicine_medicine_info/medicine_medicine_info",
+    "pages/medicine_prescr_info/medicine_prescr_info",
+    "pages/medicine_rumor_info/medicine_rumor_info",
+    "pages/method_bodytest/method_bodytest",
+    "pages/method_food/method_food",
+    "pages/method_food_info/method_food_info",
+    "pages/method_index/method_index",
+    "pages/personal_index/personal_index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,31 +30,31 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/health/health",
+        "pagePath": "pages/health_index/health_index",
         "text": "养护首页",
         "iconPath": "img/_health.png",
         "selectedIconPath": "img/health.png"
       },
       {
-        "pagePath": "pages/medicine/medicine",
+        "pagePath": "pages/medicine_index/medicine_index",
         "text": "医药科普",
         "iconPath": "img/_medicine.png",
         "selectedIconPath": "img/medicine.png"
       },
       {
-        "pagePath": "pages/method/method",
+        "pagePath": "pages/method_index/method_index",
         "text": "个性化",
         "iconPath": "img/_method.png",
         "selectedIconPath": "img/method.png"
       },
       {
-        "pagePath": "pages/forum/forum",
+        "pagePath": "pages/forum_index/forum_index",
         "text": "养生论坛",
         "iconPath": "img/_forum.png",
         "selectedIconPath": "img/forum.png"
       },
       {
-        "pagePath": "pages/personal/personal",
+        "pagePath": "pages/personal_index/personal_index",
         "text": "个人中心",
         "iconPath": "img/_personal.png",
         "selectedIconPath": "img/personal.png"

@@ -1,6 +1,6 @@
 <!--pages/method_food/method_food.wxml-->
 <view class="first_tb"  wx:for="{{foodList}}" wx:index="{{id}}">
-  <navigator class="health_item" url="/pages/food_info/food_info?id={{item.id}}" hover-class="navigator-hover">
+  <navigator class="health_item" url="/pages/method_food_info/method_food_info?id={{item.id}}" hover-class="navigator-hover">
     <!--左侧图片-->
     <view class="health_img_wrap">
       <image mode="widthFix" src="{{item.image}}"></image>

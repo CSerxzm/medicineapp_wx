@@ -1,4 +1,4 @@
-import{request} from "../../request/health.js";
+import{request} from "../../request/myrequest.js";
 Page({
 
   /**
@@ -11,7 +11,7 @@ Page({
 
   get_info(index){
     request({
-      url: '/getmedicinebyid',
+      url: '/getfoodbyid',
       data:{
         id:index
       },

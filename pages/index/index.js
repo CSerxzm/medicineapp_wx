@@ -1,4 +1,4 @@
-import{request} from "../../request/health.js";
+import{request} from "../../request/myrequest.js";
 Page({ 
   data: {
     name: '', 
@@ -62,7 +62,7 @@ Page({
             });
             wx.setStorageSync('LoginUser', that.data.name)
             wx.switchTab({
-              url: "/pages/health/health"
+              url: "/pages/health_index/health_index"
             });
           }else{
             wx.showToast({ 

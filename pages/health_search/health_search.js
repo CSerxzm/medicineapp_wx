@@ -1,37 +1,11 @@
-// pages/health01/health01.js
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabs:[
-      {
-        id:0,
-        name:"气节养生",
-        isActive:true
-      },
-      {
-        id:1,
-        name:"四季养生",
-        isActive:false
-      },
-      {
-        id:2,
-        name:"人群养生",
-        isActive:false
-      },
-    ]
-  },
 
-  handleItemChange(e){
-    //console.log(e.detail.index);
-    const index=e.detail.index;
-    let {tabs}=this.data;
-    tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
-    this.setData({
-      tabs
-    })
   },
 
   /**

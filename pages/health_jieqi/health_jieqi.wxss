@@ -1,0 +1,86 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+ }
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+.nav-item {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+.nav-item.active{
+  color:var(--themeColor);
+}
+
+.tab{
+  width: 100%;
+  padding: 10rpx;
+  margin-top: 80rpx;
+}
+
+.health_item{
+  display: flex;
+  height:240rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  box-shadow: 4rpx 1rpx 1rpx #86ff9c;
+}
+
+.health_img_wrap{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+image{
+  width: 100%;
+  max-height:200rpx;
+  border-radius:10rpx;
+}
+
+.health_info_wrap{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.health_title{
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  font-weight: bold;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding-left: 10px;
+}
+
+.health_time, .health_views{
+  color: #696969;
+  font-size: 32rpx;
+  text-align: left;
+  padding-left: 10px;
+}

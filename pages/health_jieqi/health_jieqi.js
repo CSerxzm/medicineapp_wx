@@ -1,4 +1,4 @@
-import{request} from "../../request/health.js";
+import{request} from "../../request/myrequest.js";
 const app = getApp();
 Page({
     data: {

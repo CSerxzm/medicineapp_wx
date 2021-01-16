@@ -13,7 +13,7 @@ Page({
       {
         "name":"体制测试",
         "src":'https://fuyuanplant.cn/pic_medicineapp/ceshi.png',
-        "url":"/pages/bodytest/bodytest"
+        "url":"/pages/method_bodytest/method_bodytest"
       },
       {
         "name":"目标指定",
