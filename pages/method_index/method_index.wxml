@@ -20,7 +20,23 @@
           </i-switch>
         </view>
       </view>
-      <view class="imageview">
+      <view class="imageview" bindtap="toggleRight">
         <image id="imaPic" src="{{body}}" mode="scaleToFill" mode="widthFix" />
+        <i-drawer mode="right" visible="{{showRight}}" bind:close="toggleRight" mask="{{false}}">
+            <view class="demo-container">
+                <i-cell-group>
+                    <i-cell>头部</i-cell>
+                    <i-cell>胸部</i-cell>
+                    <i-cell>腰部</i-cell>
+                    <i-cell>腿部</i-cell>
+                    <i-cell>头部</i-cell>
+                    <i-cell>胸部</i-cell>
+                    <i-cell>腰部</i-cell>
+                    <i-cell>腿部</i-cell>
+                    <i-cell>腿部1</i-cell>
+                </i-cell-group>
+            </view>
+        </i-drawer>
       </view>
+      
   </view>

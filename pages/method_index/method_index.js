@@ -9,6 +9,8 @@ Page({
     bothside:false,
     bodyimage:["../../img/man.png","../../img/manZ.png","../../img/woman.png","../../img/womanZ.png"],
     body:"../../img/man.png",
+    /*遮罩层的显示*/
+    showRight: false,
     menus:[
       {
         "name":"体制测试",
@@ -18,34 +20,38 @@ Page({
       {
         "name":"目标指定",
         "src":'https://fuyuanplant.cn/pic_medicineapp/mubiao.png',
-        "url":"/pages/health_siji/health_siji"
+        "url":"/pages/method_makedecision/method_makedecision"
       },
       {
         "name":"食物养生",
         "src":'https://fuyuanplant.cn/pic_medicineapp/food.png',
         "url":"/pages/method_food/method_food"
       }
-    ],
+      ],
+    },
+  /**拨动快关 */
+  onChange(event){
+      const detail = event.detail;
+      const id = event.currentTarget.id;
+      if(id=='sex'){
+        this.setData({
+          'sex' : detail.value,
+        }); 
+      }else{
+        this.setData({
+          'bothside' : detail.value
+        }); 
+      }
+      const index = this.data.sex*2+this.data.bothside;
+      this.setData({
+        'body':this.data.bodyimage[index]
+      }); 
   },
-/**拨动快关 */
-onChange(event){
-    const detail = event.detail;
-    const id = event.currentTarget.id;
-    if(id=='sex'){
+  toggleRight() {
       this.setData({
-        'sex' : detail.value,
-      }); 
-    }else{
-      this.setData({
-        'bothside' : detail.value
-      }); 
-    }
-    const index = this.data.sex*2+this.data.bothside;
-    this.setData({
-      'body':this.data.bodyimage[index]
-    }); 
-},
-
+          showRight: !this.data.showRight
+      });
+    },
   /**
    * 生命周期函数--监听页面加载
    */

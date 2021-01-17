@@ -11,6 +11,14 @@ Page({
     user:""
   },
   /**
+   * 跳转到个人用户信息界面
+   */
+  goToPersonlInfo:function(){
+    wx.navigateTo({
+      url: '../personal_info/personal_info',
+    });
+  },
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {

@@ -1,0 +1,33 @@
+/* pages/personal_info/personal_info.wxss */
+.page{
+  height: 100%;
+  width: 100%;
+}
+
+.row{
+  height: 100rpx;
+}
+
+.col{
+  line-height: 100rpx;
+  vertical-align: middle;
+}
+.title{
+  margin: 0 auto;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.btn{
+  margin-top: 45rpx;
+  background-color: #86ff9c;
+}
+
+.radio{
+  margin-left: 45rpx;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+  background: #86ff9c !important;
+}

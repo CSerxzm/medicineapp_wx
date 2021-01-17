@@ -65,3 +65,8 @@ radio {
   display:inline-block;
   vertical-align:middle
 }
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+  background: #86ff9c !important;
+}

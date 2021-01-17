@@ -2,18 +2,23 @@
 <view class="info">
   <view class="title">{{info.title}}</view>
   <view class="editTime">
-      发布时间：{{info.editTime}}
+      <span class="boldtext">发布时间：</span>
+        {{info.editTime}}
   </view>
   <view class="author">
-      作者：{{info.author}}
+      <span class="boldtext">作者：</span>
+      {{info.author}}
   </view>
   <view class="views">
-      浏览量：{{info.views}}
+      <span class="boldtext">浏览量：</span>
+        {{info.views}}
   </view>
   <view class="image">
     <image mode="widthFix" src="{{info.image}}"/>
   </view>
-  <view class="content"> 
-      <text>{{info.content}}</text>
+  <view class="content">
+      <text decode="{{true}}">
+        &nbsp;&nbsp; &nbsp;&nbsp;{{info.content}}
+      </text>
   </view>
 </view>

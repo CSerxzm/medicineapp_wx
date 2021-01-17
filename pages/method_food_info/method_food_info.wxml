@@ -4,14 +4,17 @@
   <view class="image">
     <image mode="widthFix" src="{{info.image}}"/>
   </view>
-  <view class="content"> 
-      <text>用料：{{info.compose}}</text>
+  <view class="content">
+      <span class="boldtext">用料：</span>
+      <view>{{info.compose}}</view>
   </view>
   <view class="content"> 
-      <text>做法：{{info.method}}</text>
+      <span class="boldtext">做法：</span>
+      <view>{{info.method}}</view>
   </view>
-  <view class="content"> 
-      <text>功效：{{info.funs}}</text>
+  <view class="content">
+      <span class="boldtext">功效：</span>
+      <view>{{info.funs}}</view>
   </view>
 </view>
 

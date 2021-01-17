@@ -14,7 +14,7 @@
 
 .editTime .author .views{
   color: #696969;
-  font-size: 32rpx;
+  font-size: 15rpx;
   text-align: left;
   padding-left: 50rpx;
 }
@@ -32,4 +32,11 @@ image{
 
 .content{
   width:100%;
+}
+
+.boldtext{
+  font-weight: bold !important;
+}
+.text{
+  margin-top: 15rpx;
 }

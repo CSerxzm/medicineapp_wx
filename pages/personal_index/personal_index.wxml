@@ -14,7 +14,7 @@
   <view class="list-wrapper">
     <view class="divLine"></view>
     <view>
-      <button>
+      <button bindtap="goToPersonlInfo">
         <view class='content'>
           <view class="listimg">
             <image id="icon" mode="aspectFill" class="iconfont icon-yonghu"></image>

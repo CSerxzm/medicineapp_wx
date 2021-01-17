@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/medicine_index/medicine_index",
+    "pages/personal_info/personal_info",
+    "pages/personal_index/personal_index",
+    "pages/method_makedecision/method_makedecision",
+    "pages/method_index/method_index",
     "pages/health_index/health_index",
     "pages/forum_add/forum_add",
     "pages/forum_comment/forum_comment",
@@ -10,15 +15,13 @@
     "pages/health_search/health_search",
     "pages/health_siji/health_siji",
     "pages/index/index",
-    "pages/medicine_index/medicine_index",
     "pages/medicine_medicine_info/medicine_medicine_info",
     "pages/medicine_prescr_info/medicine_prescr_info",
     "pages/medicine_rumor_info/medicine_rumor_info",
     "pages/method_bodytest/method_bodytest",
     "pages/method_food/method_food",
     "pages/method_food_info/method_food_info",
-    "pages/method_index/method_index",
-    "pages/personal_index/personal_index"
+    "pages/personal_changepass/personal_changepass"
   ],
   "window": {
     "backgroundTextStyle": "light",

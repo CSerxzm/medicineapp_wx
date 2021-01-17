@@ -100,3 +100,58 @@ image{
 .boldtext{
   font-weight: bold !important;
 }
+
+.item_taboos {
+  margin-right:20rpx;
+}
+
+.reality{
+  float: right;
+  width: 140rpx;
+  height: 140rpx;
+  border: 3rpx solid red;
+  border-radius: 50%;
+  overflow:hidden;
+  transform: rotate(300deg); 
+}
+
+.realityspan{
+  margin: auto auto;
+  line-height: 140rpx;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 60rpx;
+  color: red;
+}
+
+.reality_true{
+  float: right;
+  width: 140rpx;
+  height: 140rpx;
+  border: 3rpx solid blue;
+  border-radius: 50%;
+  overflow:hidden;
+  transform: rotate(300deg); 
+}
+
+.realityspan_true{
+  margin: auto auto;
+  line-height: 140rpx;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 60rpx;
+  color: blue;
+}
+
+.item_name_rumor{
+  display: -webkit-box;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  font-weight: bold;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  padding-left: 10px;
+}

@@ -8,7 +8,9 @@
     <!--右侧的标题-->
    <view class="health_info_wrap">
       <view class="health_title">{{item.name}}</view>
-      <view class="health_views">功效:{{item.funs}}</view>
+      <view class="health_views">
+        <span class="boldtext">功效:</span>{{item.funs}}
+      </view>
     </view>
  </navigator>
 </view>

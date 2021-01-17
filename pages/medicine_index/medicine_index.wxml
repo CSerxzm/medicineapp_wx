@@ -42,8 +42,14 @@
         </view>
         <!--右侧的标题-->
         <view class="item_info_wrap">
-          <view class="item_name">{{item.title}}</view>
-          <view class="item_taboos">{{item.reality=='true'?'真实':'虚假'}}</view>
+          <view class="item_name_rumor">{{item.title}}</view>
+          <view class="item_taboos">
+            <view class="{{item.reality==1 ?'reality_true':'reality'}}">
+              <span class="{{item.reality==1 ?'realityspan_true':'realityspan'}}">
+                {{item.reality== 1 ?'真实':'虚假'}}
+              </span>
+            </view>
+          </view>
         </view>
       </navigator>
     </view>
