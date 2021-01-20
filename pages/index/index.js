@@ -60,7 +60,8 @@ Page({
               icon: 'success', 
               duration: 1000 
             });
-            wx.setStorageSync('LoginUser', that.data.name)
+            console.log(result.data);
+            wx.setStorageSync('LoginUser', result.data)
             wx.switchTab({
               url: "/pages/health_index/health_index"
             });
@@ -83,5 +84,12 @@ Page({
       password,
       flag
     });
+  },
+  /*到注册界面*/
+  goToRegist:function(){
+    wx.navigateTo({
+      url: '/pages/index_regist/index_regist',
+    })
   }
+
  }) 

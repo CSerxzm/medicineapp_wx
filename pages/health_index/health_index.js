@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    user:"",
     swiperList:[{},{}],
     menus:[
       {
@@ -54,8 +55,14 @@ Page({
   onLoad: function (options) {
     /*  获得轮播图数据 */
     this.getSwiperList();
+    const user = wx.getStorageSync('LoginUser');
+    this.setData({
+      user:user
+    });
+    
     /* 获得星座数据 */
-    var xinzuo = wx.getStorageSync("xinzuo");
+    this.getxinzuo();
+    /*var xinzuo = wx.getStorageSync("xinzuo");
     if(!xinzuo){
       this.getxinzuo();
     }else{
@@ -64,6 +71,7 @@ Page({
       });
       wx.setStorageSync('xinzuo',xinzuo);
     }
+    */
     /* 获得天气的数据 */
     var weather = wx.getStorageSync("weather");
     if(!weather){
@@ -123,8 +131,9 @@ Page({
    */
   getxinzuo:function(){
     var _this = this;
-    var key = '6f99d04702c95adfc2c354dfede407b0';
-    var url = 'http://web.juhe.cn:8080/constellation/getAll?type=today&key='+key+'&consName=%E7%8B%AE%E5%AD%90%E5%BA%A7';
+    console.log('123');
+    console.log(this.data.user);
+    var url = 'http://localhost:8080/getconstellation?constellation='+encodeURI(_this.data.user.constellation);
     wx.request({
       url: url, 
       data: {},
@@ -136,4 +145,5 @@ Page({
       }
     });
   }
+
 })

@@ -71,14 +71,14 @@ Page({
    */
   onLoad: function (options) {
     this.getComments(options.id);
-    const username = wx.getStorageSync('LoginUser');
-    if(!username){
+    const user = wx.getStorageSync('LoginUser');
+    if(!user){
       wx.reLaunch({
         url: '/pages/index/index',
       });
     }else{
       this.setData({
-        name:username
+        name:user.name
       });
     }
   },

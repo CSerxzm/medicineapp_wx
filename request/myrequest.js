@@ -11,6 +11,6 @@ export const request=(params)=>{
      fail:(err)=>{
       reject(err);
      }
-    })
-  })
+    });
+  });
 }

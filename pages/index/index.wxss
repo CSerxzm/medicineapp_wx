@@ -86,3 +86,20 @@ button{
   color:#000000;
   background-color: var(--themeColor);
  }
+
+ .regist_view{
+  width: 100%;
+ }
+
+.regist{
+  float:right;
+  margin: 30rpx;
+  font-size: 32rpx;
+  vertical-align: middle;
+  border: 1rpx solid gray;
+  text-align: center;
+  line-height:80rpx;
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}

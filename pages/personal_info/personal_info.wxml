@@ -5,7 +5,7 @@
         <view class="title">用户名</view>
       </i-col>
       <i-col span="18" i-class="col-class">
-        <i-input value="{{person.name }}"  disabled placeholder="名字" />
+        <i-input value="{{user.name}}"  disabled placeholder="名字" />
       </i-col>
     </i-row>
     <i-row class="row">
@@ -13,7 +13,10 @@
         <view class="title">头像</view>
       </i-col>
       <i-col span="18" i-class="col-class">
-        <i-input value="{{person.avatar }}" placeholder="请选择头像" />
+        <view class="image"
+              bind:tap="imageClick">
+          <image src="{{image}}" />
+        </view>
       </i-col>
     </i-row>
     <i-row class="row">
@@ -22,7 +25,7 @@
       </i-col>
       <i-col span="18" i-class="col-class">
         <view class="sex,col">
-          <radio-group current="{{person.sex}}" bindchange="handleSexChange">
+          <radio-group current="{{sex}}" bindchange="handleSexChange">
               <label class="radio" >
                   <radio value="0"/>男
               </label>
@@ -38,7 +41,7 @@
         <view class="title">手机</view>
       </i-col>
       <i-col span="18" i-class="col-class">
-        <i-input value="{{person.phone}}" type="number" placeholder="输入电话号码" />
+        <i-input value="{{phone}}" type="number" placeholder="输入电话号码" />
       </i-col>
     </i-row>
     <i-row class="row">
@@ -46,12 +49,20 @@
         <view class="title">星座</view>
       </i-col>
       <i-col span="18" i-class="col-class">
-        <i-input value="{{person.constellation}}" type="number" placeholder="输入星座（固定格式XX座）" />
+        <i-input value="{{constellation}}" placeholder="输入星座（固定格式XX座）" />
+      </i-col>
+    </i-row>
+    <i-row class="row">
+      <i-col span="6" i-class="col-class" class="col">
+        <view class="title">邮箱</view>
+      </i-col>
+      <i-col span="18" i-class="col-class">
+        <i-input value="{{email}}" placeholder="输入邮箱" />
       </i-col>
     </i-row>
     <i-row class="row">
       <i-col span="24" i-class="col-class">
-        <button bind:click="handleClick" class="btn">修改</button>
+        <button bindtap="updateuser" class="btn">修改</button>
       </i-col>
     </i-row>
 

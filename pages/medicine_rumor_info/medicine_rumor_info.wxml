@@ -10,7 +10,7 @@
   </view>
   <view class="text">
       <span class="boldtext">结论：</span>
-      <view>{{item.reality== 1 ?'真实':'虚假'}}</view>
+      <view>{{info.reality == 1 ?'真实':'虚假'}}</view>
   </view>
   <view class="text">
       <span class="boldtext">内容</span>

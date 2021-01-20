@@ -3,10 +3,10 @@
   <view class="avatar-wrapper">
     <view>
       <view class="avatar">
-        <image style="border-radius:50%;" src="{{'../../img/app.png'}}"></image>
+        <image style="border-radius:50%;" src="{{user.image}}"></image>
       </view>
       <view class="name">
-        <text wx:if="{{user}}">{{user}}</text>
+        <text wx:if="{{user.name}}">{{user.name}}</text>
         <text wx:else bindtap="toLogin">注册/登录</text>
       </view>
     </view>

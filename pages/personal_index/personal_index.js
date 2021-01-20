@@ -8,7 +8,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user:""
+    user:{"authority":"测试","constellation":"天蝎座",
+      "image":"http://47.102.155.48:8080/pic_medicineapp/head1.png",
+      "name":"root","password":"password"
+    }
   },
   /**
    * 跳转到个人用户信息界面
@@ -23,7 +26,7 @@ Page({
    */
   onLoad: function (options) {
     const user = wx.getStorageSync('LoginUser');
-    console.log(user);
+    console.log(user.name);
     if(!user){
       /**带实现,不存在*/
     }else{

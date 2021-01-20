@@ -34,14 +34,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const username = wx.getStorageSync('LoginUser');
-    if(!username){
+    const user = wx.getStorageSync('LoginUser');
+    if(!user){
       wx.reLaunch({
         url: '/pages/index/index',
       });
     }else{
       this.setData({
-        name:username
+        name:user.name
       });
     }
   },
