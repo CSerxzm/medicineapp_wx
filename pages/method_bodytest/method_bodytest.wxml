@@ -1,24 +1,15 @@
-<!--pages/bodytest/bodytest.wxml-->
-<block wx:for="{{testList}}" wx:key="index">
-      <view class="all">
-        <view class="question">
-          {{item.id}}.{{item.title}}
+<view>
+  <navigator wx:for="{{questiontype}}" url="/pages/method_bodytest_info/method_bodytest_info?type={{item.type}}" hover-class="navigator-hover">
+    <l-card type="primary" plaintext="{{true}}">
+        <view class="content">
+          中医九种体质测试之{{item.type}}测试
         </view>
-        <view class="answer">
-          <radio-group>
-              <label class="radio" wx:for="{{item.answer}}">
-                  <radio value="{{item.value}}"/>{{item.name}}
-              </label>
-          </radio-group>
+        <view class="avter-share-container">
+          <view class="like-container">
+              <l-icon name="default" color="#666" size="28" />
+              <view class="number">{{item.views}}浏览</view>
+          </view>
         </view>
-      </view>
-</block>
-<block>
-      <view class="footer">
-        <view class="footer-left">第12页/共13页</view>
-        <view class="footer-right">
-          <button class='btn' bindtap='before1' disabled="{{before}}">上一页</button>
-          <button class='btn' bindtap='after1' disabled='{{after}}'>下一页</button>
-        </view>
-      </view>
-</block>
+    </l-card>
+  </navigator>
+</view>

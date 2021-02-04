@@ -1,6 +1,6 @@
 export const request=(params)=>{
-  /*const baseurl="https://fuyuanplant.cn/medicineapp";*/
-  const baseurl="http://localhost:8080";
+  var app = getApp();
+  const baseurl=app.globalData.BASEURL;
   return new Promise((resolve,reject)=>{
     wx-wx.request({
      ...params,

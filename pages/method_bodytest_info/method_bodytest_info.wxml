@@ -1,0 +1,22 @@
+<!--pages/bodytest/bodytest.wxml-->
+<block wx:for="{{testList}}" wx:key="index" wx:for-index="index">
+      <view class="all">
+        <view class="question">
+          {{index+1}}.{{item.question}}
+        </view>
+        <view class="answer">
+          <radio-group bindchange="radioChange" id="{{index}}">
+              <label class="radio" wx:for="{{item.answerList}}">
+                  <radio value="{{item.value}}"/>{{item.name}}
+              </label>
+          </radio-group>
+        </view>
+      </view>
+</block>
+<block>
+      <view class="footer">
+          <button class='btn' bindtap='postquestion'>提交</button>
+      </view>
+</block>
+
+<l-toast/>

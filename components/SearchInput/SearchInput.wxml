@@ -1,4 +1,4 @@
 <!--components/SearchInput/SearchInput.wxml-->
 <view class="SearchInput">
-  <navigator url="/pages/health_search/health_search" open-type="navigate">搜索</navigator>
+  <navigator url="/pages/health_search/health_search" open-type="navigate">搜索药材</navigator>
 </view>

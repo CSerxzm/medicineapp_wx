@@ -45,24 +45,31 @@ Page({
   },
   /*评论*/
   formSubmit: function(e){
-    request({
-      url: '/addcomment',
-      method: "POST",
-      data: {
-        name:this.data.name,
-        forumId:this.data.index,
-        content:e.detail.value.content,
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
-    })
-    .then(result=>{
-      this.getComments(this.data.index);
-      this.setData({
-        comment:""
-      });
-    })
+    if(e.detail.value.content.length == 0 ){
+        wx.lin.showToast({
+          title: '字段不能为空',
+          icon: 'error'
+        });
+    }else{
+      request({
+        url: '/addcomment',
+        method: "POST",
+        data: {
+          name:this.data.name,
+          forumId:this.data.index,
+          content:e.detail.value.content,
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      })
+      .then(result=>{
+        this.getComments(this.data.index);
+        this.setData({
+          comment:""
+        });
+      })
+    }
   },
 
   /**

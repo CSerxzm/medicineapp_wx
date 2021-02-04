@@ -18,9 +18,9 @@ Page({
         "url":"/pages/method_bodytest/method_bodytest"
       },
       {
-        "name":"目标指定",
+        "name":"测试报告",
         "src":'https://fuyuanplant.cn/pic_medicineapp/mubiao.png',
-        "url":"/pages/method_makedecision/method_makedecision"
+        "url":"/pages/method_testpaper/method_testpaper"
       },
       {
         "name":"食物养生",

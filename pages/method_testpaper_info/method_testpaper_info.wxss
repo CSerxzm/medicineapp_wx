@@ -1,0 +1,37 @@
+.body{
+  margin:5rpx;
+}
+
+.title{
+  font-size:32rpx;
+  font-weight: bold;
+  padding:20rpx;
+  text-align:center;
+}
+
+.type{
+  padding-top: 15rpx;
+  padding-bottom: 25rpx;
+}
+
+i-divider{
+  margin-top:5rpx;
+  margin-bottom:5rpx;
+}
+
+i-row{
+  padding-top: 5rpx;
+}
+
+.boldtext{
+  font-weight: bold !important;
+}
+
+.suggest{
+  margin-top: 30rpx;
+}
+
+.text{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+}

@@ -1,69 +1,35 @@
 <!--pages/personal_info/personal_info.wxml-->
-<i-panel title="修改用户信息" class="page">
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">用户名</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
-        <i-input value="{{user.name}}"  disabled placeholder="名字" />
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">头像</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
+<l-form name="user" l-form-btn-class="l-form-btn-class">
+    <l-form-item label="姓名:" name="name" label-width="80rpx">
+        <l-input id="name" value="{{user.name}}" hide-label="{{true}}"/>
+    </l-form-item>
+    <l-form-item label="头像:" name="image" label-width="80rpx">
         <view class="image"
               bind:tap="imageClick">
           <image src="{{image}}" />
         </view>
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">性别</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
-        <view class="sex,col">
-          <radio-group current="{{sex}}" bindchange="handleSexChange">
-              <label class="radio" >
-                  <radio value="0"/>男
-              </label>
-              <label class="radio" >
-                  <radio value="1"/>女
-              </label>
-          </radio-group>
-        </view>
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">手机</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
-        <i-input value="{{phone}}" type="number" placeholder="输入电话号码" />
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">星座</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
-        <i-input value="{{constellation}}" placeholder="输入星座（固定格式XX座）" />
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="6" i-class="col-class" class="col">
-        <view class="title">邮箱</view>
-      </i-col>
-      <i-col span="18" i-class="col-class">
-        <i-input value="{{email}}" placeholder="输入邮箱" />
-      </i-col>
-    </i-row>
-    <i-row class="row">
-      <i-col span="24" i-class="col-class">
-        <button bindtap="updateuser" class="btn">修改</button>
-      </i-col>
-    </i-row>
+    </l-form-item>
+    <l-form-item label="性别:" name="sex" label-width="80rpx">
+          <l-radio-group current="{{sex}}" bind:linchange="handleSexChange" placement="row">
+              <l-radio class="radio" key="0">男</l-radio>
+              <l-radio class="radio" key="1">女</l-radio>
+          </l-radio-group>
+    </l-form-item>
+    <l-form-item label="手机:" name="phone" label-width="80rpx">
+        <l-input id="phone" value="{{phone}}" rules="{{phoneRules}}" bind:lininput="phoneInput" hide-label="{{true}}"/>
+    </l-form-item>
+    <l-form-item label="星座:" name="constellation" label-width="80rpx">
+        <l-input id="constellation" value="{{constellation}}" rules="{{constellationRules}}" bind:lininput="constellationInput" hide-label="{{true}}"/>
+    </l-form-item>
+    <l-form-item label="邮箱:" name="email" label-width="80rpx">
+        <l-input id="email" value="{{email}}" rules="{{emailRules}}" bind:lininput="emailInput" hide-label="{{true}}"/>
+    </l-form-item>
+    <view slot="submit">
+        <l-button class="btn" bg-color="#86ff9c" bind:lintap="updateuser">提交</l-button>
+    </view>
+    <view slot="reset">
+        <l-button class="btn" bg-color="#86ff9c" >返回</l-button>
+    </view>
+</l-form>
 
-</i-panel>
+<l-toast/>

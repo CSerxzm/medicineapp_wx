@@ -9,16 +9,16 @@
     <view class="inputView">
       <!--账号-->
       <view>
-        <input class="inputText" placeholder="请输入用户名" bindinput="nameInput" value="{{name}}"/> 
+        <l-input placeholder="请输入用户名" hide-label="{{true}}" bind:lininput="nameInput" value="{{name}}" required="{{true}}" rules="{{nameRules}}"/>
       </view>
       <view class="line"></view>
       <!--密码--> 
-      <view> 
-        <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" value="{{password}}"/> 
+      <view>
+        <l-input placeholder="请输入密码" type="password" hide-label="{{true}}" bind:lininput="passwordInput" value="{{password}}" required="{{true}}" rules="{{passwordRules}}"/>
       </view>
       <view class="line"></view>
-      <view> 
-        <input class="inputText" password="true" placeholder="请再次输入密码" bindinput="passwordagainInput" value="{{passwordagain}}"/> 
+      <view>
+        <l-input placeholder="请再次输入密码" type="password" hide-label="{{true}}" bind:lininput="passwordagainInput" value="{{passwordagain}}" required="{{true}}" rules="{{passwordRules}}"/>
       </view> 
     </view>
     <!--按钮--> 
@@ -26,4 +26,6 @@
       <button class="loginBtn" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="regist">注册</button>
     </view>
   </view> 
-</view> 
+</view>
+
+<l-toast/>

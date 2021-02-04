@@ -1,4 +1,4 @@
-// pages/personal_info/personal_info.js
+import{request} from "../../request/myrequest.js";
 Page({
 
   /**
@@ -10,18 +10,50 @@ Page({
     sex:1,
     phone:"",
     email:"",
-    constellation:""
+    constellation:"",
+    /*校验规则*/
+    emailRules: [
+      {type: 'email',message:"无效的邮件格式"},
+      {required: true,message:"邮件为必填项"}
+    ],
+    constellationRules:[
+      {type: 'email',message:"无效的邮件格式"},
+      {required: true,message:"星座为必填项"}
+    ],
+    phoneRules: [
+      { min: 8, max: 20, message: '电话长度在8-20个字符之间', trigger: 'blur' },
+      { pattern: '^[0-9]+$', message: '电话由数字组成',trigger: 'blur'},
+      {required: true,message:"手机为必填项"}
+    ]
   },
-handleSexChange({ detail = {} }) {
+handleSexChange(e) {
   this.setData({
-      sex:detail.value
+      sex:e.detail.value
   });
 },
+
+emailInput :function (e) { 
+  console.log(e);
+  this.setData({ 
+  email:e.detail.value 
+  });
+}, 
+phoneInput :function (e) {
+  this.setData({ 
+  phone:e.detail.value 
+  });
+}, 
+constellationInput :function (e) { 
+  this.setData({ 
+    constellation:e.detail.value 
+  });
+}, 
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.lin.initValidateForm(this);
     const user = wx.getStorageSync('LoginUser');
     this.setData({
       user
@@ -94,7 +126,7 @@ handleSexChange({ detail = {} }) {
         var tempFilePaths = res.tempFilePaths
         var uid = that.data.uid
         wx.uploadFile({
-          url: 'http://localhost:8080/upload',
+          url: 'https://fuyuanplant.cn/medicineapp/upload',
           filePath: tempFilePaths[0],
           name: 'file',
           success: function (res) {
@@ -109,32 +141,40 @@ handleSexChange({ detail = {} }) {
     })
   },
   updateuser:function(){
-    console.log(123);
+    var that = this;
     request({
-      url: '/login',
+      url: '/updateuserwithoutpassandauthority',
       data: {
-        
+        name:that.data.user.name,
+        image:that.data.image,
+        sex:that.data.sex,
+        phone:that.data.phone,
+        email:that.data.email,
+        constellation:that.data.constellation
       }
     })
     .then(result=>{
       if(result.data){
+        console.log(result.data);
         wx.showToast({ 
-          title: '登录成功', 
+          title: '更新成功', 
           icon: 'success', 
           duration: 1000 
         });
-        console.log(result.data);
         wx.setStorageSync('LoginUser', result.data)
         wx.switchTab({
-          url: "/pages/health_index/health_index"
+          url: "/pages/personal_index/personal_index"
         });
       }else{
         wx.showToast({ 
-          title: '用户名密码错误', 
+          title: '更新失败', 
           icon: 'loading', 
           duration: 1000 
         }) 
       }
     })
-  }
+  },
+  formValidate: {
+    email: [{ required: true, pattern: /^[1-9]{1}\d{2,}$/, message: '请输入100及以上的整数', trigger: "blur" }]
+  },
 })

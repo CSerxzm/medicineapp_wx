@@ -11,24 +11,31 @@ Page({
   },
 
   formSubmit: function(e){
-    console.log(e);
-    request({
-      url: '/addforum',
-      method: "POST",
-      data: {
-        name:this.data.name,
-        content:e.detail.value.content,
-        keyword:e.detail.value.label
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
-    })
-    .then(result=>{
-      wx.navigateBack({
-        delta: 1  //小程序关闭当前页面返回上一页面
+    if(e.detail.value.content.length == 0 || 
+      e.detail.value.label.length ==0 ){
+        wx.lin.showToast({
+          title: '字段不能为空',
+          icon: 'error'
+        })
+    }else{
+      request({
+        url: '/addforum',
+        method: "POST",
+        data: {
+          name:this.data.name,
+          content:e.detail.value.content,
+          keyword:e.detail.value.label
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      })
+      .then(result=>{
+        wx.navigateBack({
+          delta: 1  //小程序关闭当前页面返回上一页面
+        });
       });
-    })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

@@ -3,7 +3,16 @@ Page({
   data: {
     name: '', 
     password:'',
-    passwordagain:""
+    passwordagain:"",
+    nameRules:[
+      { min: 4, max: 8, message: '用户名长度在4-8个字符之间', trigger: 'blur' },
+      { pattern: '^[0-9a-zA-Z]+$', message: '用户名由数字大小字母组成',trigger: 'blur'},
+      {required: true,message:"用户名为必填项"}
+    ],
+    passwordRules: [
+      { min: 4, max: 8, message: '密码长度在4-8个字符之间', trigger: 'blur' },
+      {required: true,message:"密码为必填项"}
+    ]
   },
  // 获取输入账号 
   nameInput:function (e) { 

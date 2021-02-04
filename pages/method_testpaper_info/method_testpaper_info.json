@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-divider": "../../iviewUI/dist/divider/index",
+    "i-row": "../../iviewUI/dist/row/index",
+    "i-col": "../../iviewUI/dist/col/index",
+    "l-tag":"../../linUI/dist/tag/index"
+  }
+}

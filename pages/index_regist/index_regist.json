@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "l-input":"../../linUI/dist/input/index",
+    "l-toast":"../../linUI/dist/toast/index"
+  }
 }

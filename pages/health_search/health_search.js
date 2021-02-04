@@ -1,11 +1,38 @@
 // pages/search/search.js
+import{request} from "../../request/myrequest.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    searchValue:"",
+    itemsList:[],
+    page:{
+      pageIndex:1,
+      totalSize:""
+    }
+  },
 
+  valueChange: function(e){
+    this.setData({
+      searchValue:e.detail.value
+    });
+    //获得相关的数据
+    request({
+      url: '/searchmedicines',
+      data:{
+        name:this.data.searchValue,
+        pageIndex:this.data.page.pageIndex
+      },
+    })
+    .then(result=>{
+      this.setData({
+        itemsList:[...this.data.itemsList,...result.data.data],
+        /*页码相关*/
+        page:result.data.page,
+      });
+    });
   },
 
   /**

@@ -1,0 +1,48 @@
+<!--pages/method_testpaper_info/method_testpaper_info.wxml-->
+<view class="body">
+  <view class="title">
+    测试报告单
+  </view>
+  <i-divider color="#86ff9c;" lineColor="#86ff9c;" height="20rpx"></i-divider>
+  <view class="type">
+    <i-row style="font-weight:bold;">
+        <i-col span="8" i-class="col-class" offset="3">测试结果</i-col>
+        <i-col span="8" i-class="col-class">测试时间</i-col>
+    </i-row>
+    <i-row style="font-size:28rpx;">
+        <i-col span="8" i-class="col-class" offset="3">{{testresult.type}}</i-col>
+        <i-col span="12" i-class="col-class">{{time}}</i-col>
+    </i-row>
+    <i-row style="font-size:20rpx;margin-top:35rpx;">
+      <i-col span="20" i-class="col-class" offset="2">*注：以上结果只限于参考，以临床诊断为主</i-col>
+    </i-row>
+  </view>
+  <i-divider color="#86ff9c" lineColor="#86ff9c" height="20rpx"></i-divider>
+  <view class="suggest">
+    <l-tag shape="circle" bg-color="#86ff9c">系统建议</l-tag>
+  </view>
+  <view class="text">
+    <span class="boldtext">体质特征：</span>{{testresult.character}}
+  </view>
+  <view class="text">
+    <span class="boldtext">形成原因：</span>{{testresult.reason}}
+  </view>
+  <view class="text">
+    <span class="boldtext">发病倾向：</span>{{testresult.attack}}
+  </view>
+  <view class="text">
+    <span class="boldtext">保健原则：</span>{{testresult.healthPrinciple}}
+  </view>
+  <view class="text">
+    <span class="boldtext">起居养生：</span>{{testresult.dailyCare}}
+  </view>
+  <view class="text">
+    <span class="boldtext">饮食调养：</span>{{testresult.foodCare}}
+  </view>
+  <view class="text">
+    <span class="boldtext">药物调理：</span>{{testresult.medicineCare}}
+  </view>
+  <view class="text">
+    <span class="boldtext">精神疗养：</span>{{testresult.spiritCare}}
+  </view>
+</view>

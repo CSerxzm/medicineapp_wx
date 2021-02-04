@@ -1,0 +1,17 @@
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view>
+  <view class="title">
+    体质测试报告
+  </view>
+</view>
+<view wx:for="{{paperList}}">
+  <navigator class="health_item" url="/pages/method_testpaper_info/method_testpaper_info?type={{item.type}}" hover-class="navigator-hover">  
+    <l-card type="primary"
+            plaintext="{{true}}"
+            title="{{index+1}}. {{item.type}}测试">
+      <view class="content">
+        时间：{{filter.getDateTime(item.createTime)}}
+      </view>
+    </l-card>
+  </navigator>
+</view>

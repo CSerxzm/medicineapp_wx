@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "l-button":"../../linUI/dist/button/index",
+    "l-input":"../../linUI/dist/input/index",
+    "l-form":"../../linUI/dist/form/index",
+    "l-form-item":"../../linUI/dist/form-item/index",
+    "l-toast":"../../linUI/dist/toast/index"
+  }
 }

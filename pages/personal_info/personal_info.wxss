@@ -2,29 +2,23 @@
 .page{
   height: 100%;
   width: 100%;
+  padding:10rpx;
 }
 
-.row{
-  height: 100rpx;
+.l-form-btn-class{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
 }
 
-.col{
-  line-height: 100rpx;
-  vertical-align: middle;
-}
-.title{
-  margin: 0 auto;
-  vertical-align: middle;
-  margin-left: 20rpx;
-}
-
-.btn{
-  margin-top: 45rpx;
-  background-color: #86ff9c;
+.image{
+  margin-left: 60rpx;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
 }
 
 .radio{
-  margin-left: 45rpx;
+  margin-left: 60rpx;
 }
 
 /* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */

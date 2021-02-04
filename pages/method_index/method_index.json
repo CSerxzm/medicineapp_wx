@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "i-switch": "../../dist/switch/index",
-    "i-drawer": "../../dist/drawer/index",
-    "i-cell-group": "../../dist/cell-group/index",
-    "i-cell": "../../dist/cell/index"
+    "i-switch": "../../iviewUI/dist/switch/index",
+    "i-drawer": "../../iviewUI/dist/drawer/index",
+    "i-cell-group": "../../iviewUI/dist/cell-group/index",
+    "i-cell": "../../iviewUI/dist/cell/index"
   }
 }

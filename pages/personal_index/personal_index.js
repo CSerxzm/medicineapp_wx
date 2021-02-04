@@ -21,6 +21,16 @@ Page({
       url: '../personal_info/personal_info',
     });
   },
+
+    /**
+   * 跳转到更改密码界面
+   */
+  goToChangePassInfo:function(){
+    wx.navigateTo({
+      url: '../personal_changepass/personal_changepass',
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -39,7 +49,6 @@ Page({
     到登录界面
   */
  toLogin:function(){
-   console.log("123");
    wx.reLaunch({
     url: '/pages/index/index',
   });
@@ -54,6 +63,9 @@ Page({
     title: '缓存清理成功', 
     icon: 'success', 
     duration: 1000 
+  });
+  wx.navigateTo({
+    url: '../index/index',
   });
  },
 

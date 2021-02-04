@@ -133,7 +133,8 @@ Page({
     var _this = this;
     console.log('123');
     console.log(this.data.user);
-    var url = 'http://localhost:8080/getconstellation?constellation='+encodeURI(_this.data.user.constellation);
+    var app = getApp();
+    var url = app.globalData.BASEURL+'/getconstellation?constellation='+encodeURI(_this.data.user.constellation);
     wx.request({
       url: url, 
       data: {},

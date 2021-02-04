@@ -20,3 +20,5 @@
   </view>
 </form>
 
+<l-toast />
+

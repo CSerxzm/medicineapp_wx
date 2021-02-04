@@ -5,27 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    testList:[
-      { id:1,
-        title:"你是不是天天比较开心？",
-        answer:[{name:"是",value:1},{name:"不是",value:2}]
-      },
-      { id:2,
-        title:"你是不是天天比较开心？",
-        answer:[{name:"你猜猜",value:1},{name:"我不猜",value:2}]
-      },
-      { id:3,
-        title:"你是不是天天比较开心？",
-        answer:[{name:"2345",value:1},{name:"你觉得喃",value:2}]
-      },
-    ],
-    index:"",
-    page:{
-      pageIndex:1,
-      totalSize:""
-    }
+    questiontype:""
   },
-  get_items(){
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    request({
+      url: '/getquestiontype'
+    })
+    .then(result=>{
+      this.setData({
+        questiontype:result.data
+      });
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
 
   },
 
@@ -33,20 +33,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.get_items();
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    if(this.data.page.pageIndex>=this.data.page.totalSize){
-      //没有下一页数据
-      console.log("没有下一页");
-    }else{
-      //console.log("有下一页");
-      this.data.page.pageIndex++;
-      this.get_items();
-    }
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

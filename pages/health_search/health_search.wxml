@@ -1,2 +1,20 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="search">
+  <l-search-bar placeholder="搜索" bind:linblur="valueChange"/>
+</view>
+<view>
+  <view class="first_tb"  wx:for="{{itemsList}}" wx:index="{{id}}">
+      <navigator class="item_item" url="/pages/medicine_medicine_info/medicine_medicine_info?id={{item.id}}" hover-class="navigator-hover">
+        <!--左侧图片-->
+        <view class="item_img_wrap">
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </view>
+        <!--右侧的标题-->
+        <view class="item_info_wrap">
+          <view class="item_name">{{item.name}}</view>
+          <view class="item_funs"><span class="boldtext">作用：</span>{{item.funs}}</view>
+        </view>
+      </navigator>
+    </view>
+</view>
+
