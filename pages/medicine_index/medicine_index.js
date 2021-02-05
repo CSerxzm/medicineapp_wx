@@ -1,9 +1,6 @@
 import{request} from "../../request/myrequest.js";
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     tabs:[
       {

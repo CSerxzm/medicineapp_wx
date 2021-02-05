@@ -1,13 +1,13 @@
 <!--pages/personal_info/personal_info.wxml-->
 <l-form name="user" l-form-btn-class="l-form-btn-class">
-    <l-form-item label="原来密码" name="oldPass" label-width="180rpx">
-        <l-input id="oldPass" value="{{oldPass}}" bind:lininput="oldPassInput" hide-label="{{true}}"/>
+    <l-form-item label="原来密码:" name="oldPass" label-width="180rpx">
+        <l-input id="oldPass" value="{{oldPass}}"  type="password" bind:lininput="oldPassInput" hide-label="{{true}}"/>
     </l-form-item>
-    <l-form-item label="修改密码" name="newPass" label-width="180rpx">
-        <l-input id="newPass" value="{{newPass}}" bind:lininput="newPassInput" hide-label="{{true}}"/>
+    <l-form-item label="修改密码:" name="newPass" label-width="180rpx">
+        <l-input id="newPass" value="{{newPass}}" type="password" bind:lininput="newPassInput" hide-label="{{true}}"/>
     </l-form-item>
-    <l-form-item label="确认密码" name="againNewPass" label-width="180rpx">
-        <l-input id="againNewPass" value="{{againNewPass}}" bind:lininput="againNewPassInput" hide-label="{{true}}"/>
+    <l-form-item label="确认密码:" name="againNewPass" label-width="180rpx">
+        <l-input id="againNewPass" value="{{againNewPass}}" type="password" bind:lininput="againNewPassInput" hide-label="{{true}}"/>
     </l-form-item>
     <view slot="submit">
         <l-button class="btn" bg-color="#86ff9c" bind:lintap="updateuser">提交</l-button>

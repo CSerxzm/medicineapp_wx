@@ -62,16 +62,6 @@ Page({
     
     /* 获得星座数据 */
     this.getxinzuo();
-    /*var xinzuo = wx.getStorageSync("xinzuo");
-    if(!xinzuo){
-      this.getxinzuo();
-    }else{
-      this.setData({
-          xinzuo:xinzuo
-      });
-      wx.setStorageSync('xinzuo',xinzuo);
-    }
-    */
     /* 获得天气的数据 */
     var weather = wx.getStorageSync("weather");
     if(!weather){
@@ -131,8 +121,6 @@ Page({
    */
   getxinzuo:function(){
     var _this = this;
-    console.log('123');
-    console.log(this.data.user);
     var app = getApp();
     var url = app.globalData.BASEURL+'/getconstellation?constellation='+encodeURI(_this.data.user.constellation);
     wx.request({
@@ -145,6 +133,17 @@ Page({
         });
       }
     });
-  }
+  },
+    /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    const user = wx.getStorageSync('LoginUser');
+    this.setData({
+      user:user
+    });
+    /* 获得星座数据 */
+    this.getxinzuo();
+  },
 
 })

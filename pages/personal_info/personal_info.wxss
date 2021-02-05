@@ -12,13 +12,13 @@
 }
 
 .image{
-  margin-left: 60rpx;
+  margin-left: 35rpx;
   margin-top:20rpx;
   margin-bottom: 20rpx;
 }
 
 .radio{
-  margin-left: 60rpx;
+  margin-left: 35rpx;
 }
 
 /* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */

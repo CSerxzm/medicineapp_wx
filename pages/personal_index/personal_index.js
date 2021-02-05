@@ -1,12 +1,5 @@
-
-// pages/user/user.js
-
 var _app = getApp()
-
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     user:{"authority":"测试","constellation":"天蝎座",
       "image":"http://47.102.155.48:8080/pic_medicineapp/head1.png",
@@ -21,7 +14,6 @@ Page({
       url: '../personal_info/personal_info',
     });
   },
-
     /**
    * 跳转到更改密码界面
    */
@@ -30,13 +22,18 @@ Page({
       url: '../personal_changepass/personal_changepass',
     });
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     const user = wx.getStorageSync('LoginUser');
-    console.log(user.name);
+    if(!user){
+      /**带实现,不存在*/
+    }else{
+      this.setData({
+        user:user
+      })
+    }
+  },
+  onShow: function () {
+    const user = wx.getStorageSync('LoginUser');
     if(!user){
       /**带实现,不存在*/
     }else{
@@ -53,7 +50,6 @@ Page({
     url: '/pages/index/index',
   });
   },
-
   /*
     清除缓存
   */
@@ -82,5 +78,5 @@ Page({
        console.log("转发失败", res);
       }
     }
-  },
+  }
 })

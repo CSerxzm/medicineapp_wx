@@ -20,3 +20,4 @@
 </block>
 
 <l-toast/>
+<l-dialog/>

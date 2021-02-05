@@ -1,9 +1,5 @@
 import{request} from "../../request/myrequest.js";
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     user:"",
     image:"",
@@ -26,32 +22,29 @@ Page({
       {required: true,message:"手机为必填项"}
     ]
   },
-handleSexChange(e) {
-  this.setData({
-      sex:e.detail.value
-  });
-},
+  
+  handleSexChange(e) {
+    this.setData({
+        sex:e.detail.value
+    });
+  },
 
-emailInput :function (e) { 
-  console.log(e);
-  this.setData({ 
-  email:e.detail.value 
-  });
-}, 
-phoneInput :function (e) {
-  this.setData({ 
-  phone:e.detail.value 
-  });
-}, 
-constellationInput :function (e) { 
-  this.setData({ 
-    constellation:e.detail.value 
-  });
-}, 
+  emailInput :function (e) { 
+    this.setData({ 
+    email:e.detail.value 
+    });
+  }, 
+  phoneInput :function (e) {
+    this.setData({ 
+    phone:e.detail.value 
+    });
+  }, 
+  constellationInput :function (e) { 
+    this.setData({ 
+      constellation:e.detail.value 
+    });
+  }, 
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     wx.lin.initValidateForm(this);
     const user = wx.getStorageSync('LoginUser');
@@ -67,54 +60,6 @@ constellationInput :function (e) {
     });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   imageClick:function(){
     var that = this;
     wx.chooseImage({  //从本地相册选择图片或使用相机拍照
@@ -130,7 +75,6 @@ constellationInput :function (e) {
           filePath: tempFilePaths[0],
           name: 'file',
           success: function (res) {
-            console.log(res.data);
             const image = res.data;
             that.setData({
               image
@@ -173,8 +117,5 @@ constellationInput :function (e) {
         }) 
       }
     })
-  },
-  formValidate: {
-    email: [{ required: true, pattern: /^[1-9]{1}\d{2,}$/, message: '请输入100及以上的整数', trigger: "blur" }]
-  },
+  }
 })

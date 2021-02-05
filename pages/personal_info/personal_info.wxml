@@ -1,27 +1,27 @@
 <!--pages/personal_info/personal_info.wxml-->
 <l-form name="user" l-form-btn-class="l-form-btn-class">
-    <l-form-item label="姓名:" name="name" label-width="80rpx">
-        <l-input id="name" value="{{user.name}}" hide-label="{{true}}"/>
+    <l-form-item label="姓名:" name="name" label-width="180rpx">
+        <l-input id="name" value="{{user.name}}" hide-label="{{true}}" disabled="{{true}}"/>
     </l-form-item>
-    <l-form-item label="头像:" name="image" label-width="80rpx">
+    <l-form-item label="头像:" name="image" label-width="180rpx">
         <view class="image"
               bind:tap="imageClick">
           <image src="{{image}}" />
         </view>
     </l-form-item>
-    <l-form-item label="性别:" name="sex" label-width="80rpx">
+    <l-form-item label="性别:" name="sex" label-width="180rpx">
           <l-radio-group current="{{sex}}" bind:linchange="handleSexChange" placement="row">
               <l-radio class="radio" key="0">男</l-radio>
               <l-radio class="radio" key="1">女</l-radio>
           </l-radio-group>
     </l-form-item>
-    <l-form-item label="手机:" name="phone" label-width="80rpx">
+    <l-form-item label="手机:" name="phone" label-width="180rpx">
         <l-input id="phone" value="{{phone}}" rules="{{phoneRules}}" bind:lininput="phoneInput" hide-label="{{true}}"/>
     </l-form-item>
-    <l-form-item label="星座:" name="constellation" label-width="80rpx">
+    <l-form-item label="星座:" name="constellation" label-width="180rpx">
         <l-input id="constellation" value="{{constellation}}" rules="{{constellationRules}}" bind:lininput="constellationInput" hide-label="{{true}}"/>
     </l-form-item>
-    <l-form-item label="邮箱:" name="email" label-width="80rpx">
+    <l-form-item label="邮箱:" name="email" label-width="180rpx">
         <l-input id="email" value="{{email}}" rules="{{emailRules}}" bind:lininput="emailInput" hide-label="{{true}}"/>
     </l-form-item>
     <view slot="submit">

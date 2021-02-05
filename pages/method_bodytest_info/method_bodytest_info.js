@@ -1,8 +1,5 @@
 import{request} from "../../request/myrequest.js";
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     testList:[],
     type:""
@@ -64,10 +61,15 @@ Page({
         name:user.name
       },
       success: function (res) { 
-        console.log(res);
-        wx.lin.showToast({
-          title: res.data.type,
-          icon: 'success'
+        wx.lin.showDialog({
+          type:"alert",
+          title:"测试结果",
+          content:res.data.type,
+          success: (res) => {
+            wx.redirectTo({
+              url: "/pages/method_bodytest/method_bodytest"
+            });
+          }
         });
       }  
   }); 

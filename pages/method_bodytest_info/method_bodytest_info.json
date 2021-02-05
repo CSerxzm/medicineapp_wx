@@ -3,6 +3,7 @@
     "i-page": "../../iviewUI/dist/page/index",
     "i-row": "../../iviewUI/dist/row/index",
     "i-col": "../../iviewUI/dist/col/index",
-    "l-toast":"../../linUI/dist/toast/index"
+    "l-toast":"../../linUI/dist/toast/index",
+    "l-dialog":"../../linUI/dist/dialog/index"
   }
 }

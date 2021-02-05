@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/forum_index/forum_index",
+    "pages/method_bodytest/method_bodytest",
+    "pages/personal_info/personal_info",
     "pages/index/index",
     "pages/method_testpaper_info/method_testpaper_info",
     "pages/method_testpaper/method_testpaper",
-    "pages/method_bodytest/method_bodytest",
-    "pages/personal_info/personal_info",
     "pages/personal_changepass/personal_changepass",
     "pages/health_index/health_index",
     "pages/method_index/method_index",
@@ -14,7 +15,6 @@
     "pages/medicine_index/medicine_index",
     "pages/personal_index/personal_index",
     "pages/forum_comment/forum_comment",
-    "pages/forum_index/forum_index",
     "pages/health_info/health_info",
     "pages/health_jieqi/health_jieqi",
     "pages/health_renqun/health_renqun",
