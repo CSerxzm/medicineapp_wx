@@ -74,7 +74,7 @@
  .breakup_line{
     background: #86ff9c;
     width:90%;
-    height: 4rpx;
+    height: 6rpx;
     margin: auto 0rpx;
  }
 
@@ -105,7 +105,9 @@
 }
 
 .inputView{
-  border: 3rpx solid #86ff9c;
+  border: 3rpx solid var(--themeColor);
+  border-radius: 20rpx;
+  padding: 4rpx;
 }
 
 .butView{
@@ -114,8 +116,12 @@
 }
 
 .btn1{
-  padding:5rpx;
-  background-color: #86ff9c;
+  font-weight: normal;
+  width: 30%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+  background-color:var(--themeColor);
 }
 
 .card {

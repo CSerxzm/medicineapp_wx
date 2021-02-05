@@ -8,7 +8,7 @@ Page({
     againNewPass:"",
     /*校验规则*/
     passwordRules: [
-      {type: 'email',message:"无效的密码格式"},
+      { min: 4, max: 8, message: '密码长度在4-8个字符之间', trigger: 'blur' },
       {required: true,message:"密码为必填项"}
     ]
   },

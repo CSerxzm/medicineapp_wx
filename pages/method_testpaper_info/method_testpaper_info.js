@@ -18,6 +18,7 @@ Page({
     this.setData({
       type:options.type,
       time:options.time
+      
     });
     request({
       url: '/selectresultbytype',

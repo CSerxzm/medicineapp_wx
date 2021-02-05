@@ -6,6 +6,7 @@
     "l-radio-group":"../../linUI/dist/radio-group/index",
     "l-form":"../../linUI/dist/form/index",
     "l-form-item":"../../linUI/dist/form-item/index",
-    "l-toast":"../../linUI/dist/toast/index"
+    "l-toast":"../../linUI/dist/toast/index",
+    "Select":"../../components/select/select"
   }
 }

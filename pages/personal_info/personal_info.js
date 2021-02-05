@@ -1,6 +1,7 @@
 import{request} from "../../request/myrequest.js";
 Page({
   data: {
+    selectArray: ['白羊座','金牛座','双子座','巨蟹座','狮子座','处女座','天秤座','天蝎座','射手座','摩羯座','水瓶座','双鱼座'],
     user:"",
     image:"",
     sex:1,
@@ -11,10 +12,6 @@ Page({
     emailRules: [
       {type: 'email',message:"无效的邮件格式"},
       {required: true,message:"邮件为必填项"}
-    ],
-    constellationRules:[
-      {type: 'email',message:"无效的邮件格式"},
-      {required: true,message:"星座为必填项"}
     ],
     phoneRules: [
       { min: 8, max: 20, message: '电话长度在8-20个字符之间', trigger: 'blur' },
@@ -117,5 +114,10 @@ Page({
         }) 
       }
     })
+  },
+  select: function(e) {
+    this.setData({
+      constellation:e.detail
+    });
   }
 })

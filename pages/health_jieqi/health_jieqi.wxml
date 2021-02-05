@@ -1,4 +1,4 @@
-<!--节气养生模块-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
     <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="true">
         <block wx:for="{{tabs}}" wx:key="id">
             <view class="nav-item {{currentTab == item.id ?'active':''}}"  data-current="{{item.id}}" bindtap="switchNav">{{item.name}}</view>
@@ -7,7 +7,7 @@
     <!-- 页面内容 -->
     <view class="tab">
       <view class="first_tb"  wx:for="{{jiqiList}}" wx:index="{{id}}">
-        <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+        <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="none">
         <!--左侧图片-->
           <view class="health_img_wrap">
             <image mode="widthFix" src="{{item.image}}"></image>
@@ -15,7 +15,7 @@
           <!--右侧的标题-->
           <view class="health_info_wrap">
             <view class="health_title">{{item.title}}</view>
-            <view class="health_time">时间:{{item.editTime}}</view>
+            <view class="health_time">时间:{{filter.getDateTime(item.editTime)}}</view>
             <view class="health_views">浏览:{{item.views}}</view>
           </view>
         </navigator>

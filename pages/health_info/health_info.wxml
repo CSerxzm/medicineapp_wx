@@ -1,9 +1,9 @@
-<!--pages/health_info/health_info.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
 <view class="info">
   <view class="title">{{info.title}}</view>
   <view class="editTime">
       <span class="boldtext">发布时间：</span>
-        {{info.editTime}}
+      {{filter.getDateTime(info.editTime)}}
   </view>
   <view class="author">
       <span class="boldtext">作者：</span>

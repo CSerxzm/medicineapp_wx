@@ -4,7 +4,7 @@
   <!--春季-->
   <block wx:if="{{tabs[0].isActive}}">
     <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
-      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}"  hover-class="none">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -21,7 +21,7 @@
   <!--夏季-->
   <block wx:if="{{tabs[1].isActive}}">
     <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
-      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}"  hover-class="none">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -38,7 +38,7 @@
   <!--秋季-->
   <block wx:if="{{tabs[2].isActive}}">
     <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
-      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}"  hover-class="none">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>
@@ -55,7 +55,7 @@
   <!--冬季-->
   <block wx:if="{{tabs[3].isActive}}">
     <view class="first_tb"  wx:for="{{sijiList}}" wx:index="{{id}}">
-      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}" hover-class="navigator-hover">
+      <navigator class="health_item" url="/pages/health_info/health_info?id={{item.id}}"  hover-class="none">
         <!--左侧图片-->
         <view class="health_img_wrap">
           <image mode="widthFix" src="{{item.image}}"></image>

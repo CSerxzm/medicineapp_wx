@@ -29,11 +29,6 @@
                     <i-cell>胸部</i-cell>
                     <i-cell>腰部</i-cell>
                     <i-cell>腿部</i-cell>
-                    <i-cell>头部</i-cell>
-                    <i-cell>胸部</i-cell>
-                    <i-cell>腰部</i-cell>
-                    <i-cell>腿部</i-cell>
-                    <i-cell>腿部1</i-cell>
                 </i-cell-group>
             </view>
         </i-drawer>

@@ -1,6 +1,6 @@
 <wxs module="filter" src="../../utils/util.wxs"></wxs>
 <block wx:for="{{forumList}}" wx:key="index">
-  <navigator url="/pages/forum_comment/forum_comment?id={{item.id}}">
+  <navigator url="/pages/forum_comment/forum_comment?id={{item.id}}" hover-class="none">
     <!-- avatar -->
     <l-card type="avatar" l-class="card" image="{{item.user.image}}"
     title="{{item.user.name}}" describe="{{filter.getDateTime(item.editTime)}}">
@@ -11,7 +11,7 @@
         </view>
         <view class="avter-share-container">
         <view class="like-container">
-            <l-icon name="favor" color="#666" size="28" />
+            <i-icon type="label" size="14" color="#666" />
             <view class="number">{{item.keyword}}</view>
         </view>
         <view class="like-container">
@@ -24,7 +24,7 @@
 </block>
 
 <view class="pageadd">
-  <navigator url="/pages/forum_add/forum_add">
-    <image id="tianjia" class="iconfont icon-tianjia"/>
+  <navigator url="/pages/forum_add/forum_add" hover-class="none,">
+    <i-icon id="tianjia" type="editor" size="30"/>
   </navigator>
 </view>

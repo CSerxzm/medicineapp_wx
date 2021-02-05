@@ -5,6 +5,13 @@
   padding:10rpx;
 }
 
+.title{
+  font-size:32rpx;
+  font-weight: bold;
+  padding:20rpx;
+  text-align:center;
+}
+
 .l-form-btn-class{
   display: flex;
   justify-content: space-around;

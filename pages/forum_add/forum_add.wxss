@@ -19,7 +19,7 @@
   width: 95%;
   overflow:auto;
   border-radius: 20rpx;
-  border: 5rpx solid var(--themeColor);
+  border: 3rpx solid var(--themeColor);
 }
 
 .label{
@@ -30,17 +30,18 @@ input{
   margin-top: 20rpx;
   border-radius: 20rpx;
   padding:10rpx;
-  border: 5rpx solid var(--themeColor);
+  border: 3rpx solid var(--themeColor);
 }
 
 .buttonview{
   margin-top: 20rpx;
-  border-radius: 20rpx;
+  border-radius: 5rpx;
   display: flex;
   flex-direction: row;
 }
 
 .buttontemp{
+  font-weight: normal;
   width: 30%;
   margin-left: 10rpx;
   margin-right: 10rpx;
