@@ -1,45 +1,39 @@
 <wxs module="filter" src="../../utils/util.wxs"></wxs>
 <view class="all">
-  <view class="head">    
-          <image class="image_head" src="{{content.user.image}}" />
-          <!-- 包裹两行文字 -->
-          <view class="nameandtime">
-            <text class="name">{{content.user.name}}</text>
-            <text class="time">{{filter.getDateTime(content.editTime)}}</text>
-          </view>
+  <view class="head">
+    <l-avatar shape="circle" src="{{content.user.image}}" size="80"/>
+    <!-- 包裹两行文字 -->
+    <view class="nameandtime">
+      <text class="name">{{content.user.name}}</text>
+      <text class="time">{{filter.getDateTime(content.editTime)}}</text>
+    </view>
   </view>
   <view class="content">
    {{content.content}}
   </view>
+  <view class="breakup">
+    <view class="breakup_icon">评论</view>
+    <view class="breakup_line"></view>
+  </view>
   <view class="addcomment">
     <form  bindsubmit="formSubmit">
       <view class="inputView">
-        <input name="content"  value="{{comment}}" class="addcomment_input" placeholder="留下你的足迹"/>
+        <textarea  class="content" name="content" value="{{comment}}" maxlength='100' placeholder="留下你的足迹"></textarea>
       </view>
       <view class="butView">
         <button class="btn1"  formType="submit">发送</button>
       </view>
     </form>
   </view>
-  <view class="breakup">
-    <view class="breakup_icon">评论</view>
-    <view class="breakup_line"></view>
-  </view>
   <view class="comments">
     <!--评论开始-->
-    <view class="comment" wx:for="{{commentslist}}" wx:key="id">
-        <view class="head">    
-          <image class="image_content" src="{{item.user.image}}"/>
-          <!-- 包裹两行文字 -->
-          <view class="nameandtime">
-            <text class="name">{{item.user.name}}</text>
-            <text class="time">{{filter.getDateTime(item.editTime)}}</text>
-          </view>
-        </view>
-        <view class="comment_content">
-          <text>{{item.content}}</text>
-        </view>
-    </view>
+    <l-card type="avatar" wx:for="{{commentslist}}" wx:key="id" l-class="card" image="{{item.user.image}}"
+    title="{{item.user.name}}" describe="{{filter.getDateTime(item.editTime)}}">
+      <!-- 此处为content -->
+      <view class="avter-content">
+        {{item.content}}
+      </view>
+    </l-card>
     <!--评论结束-->
   </view>
 </view>

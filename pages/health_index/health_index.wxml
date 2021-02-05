@@ -2,7 +2,7 @@
   <SearchInput></SearchInput>
   <view class="menu_container">
       <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:for-item="menu">
-        <navigator url="{{menu.url}}" >
+        <navigator url="{{menu.url}}" hover-class="none">
           <image class="menu_icon" src="{{menu.src}}" />
           <text class="menu_name">{{menu.name}}</text>
         </navigator>

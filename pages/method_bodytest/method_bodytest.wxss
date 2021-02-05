@@ -1,13 +1,10 @@
-.card {
-  margin: 10rpx auto !important;
-  border: 3rpx solid #E0E3DA !important;
-  box-shadow:5rpx 5rpx 5rpx 5rpx #E0E3DA !important;
+.body{
+  padding:10rpx;
 }
 
-.right-card {
-  height: 180rpx !important;
-  width: 220rpx !important;
-  border-radius: 12rpx !important;
+.card {
+  margin: 2rpx !important;
+  box-shadow:2rpx #E0E3DA !important;
 }
 
 .content {

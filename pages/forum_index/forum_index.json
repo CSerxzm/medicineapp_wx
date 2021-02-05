@@ -1,4 +1,6 @@
 {
   "usingComponents": {
+    "l-card":"../../linUI/dist/card/index",
+    "l-icon":"../../linUI/dist/icon/index"
   }
 }

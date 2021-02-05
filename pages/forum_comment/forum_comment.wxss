@@ -14,12 +14,6 @@
   height: 80rpx;
 }
 
-/* 图片 */
-.image_head{
-  width: 80rpx;
-  height: 80rpx;
-}
-
 .nameandtime{
   display: flex;
   flex-direction: column;
@@ -52,16 +46,15 @@
 
 .content{
   width:100%;
+  min-height: 150rpx;
   font-size: 32rpx;
   word-wrap: break-word;
   word-break: break-all;
   white-space: pre-line;
 }
+
 .comments{
   width:100%;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
 }
 
  .breakup{
@@ -94,43 +87,59 @@
   width:100%;
   border-radius: 5rpx;
   padding-bottom: 20rpx;
-  border: 3rpx solid #E0E3DA;
+  border: 3rpx solid #86ff9c;
 }
 
 .comment_content{
-  width:100%;
   font-size: 28rpx;
   word-wrap: break-word;
   word-break: break-all;
   white-space: pre-line;
 }
 
-.image_content{
-  width: 60rpx;
-  height: 60rpx;
-}
-
 /*发布评论*/
 .addcomment{
-  width:100%;
+  width:95%;
   padding:10rpx;
-  border-radius:5rpx;
-  border:4rpx solid #cdcdcd;
   margin-top: 30rpx;
 }
 
-
-.addcomment_input{
-  width: 100%;
-  height: 100rpx;
-  font-size: 30rpx;
+.inputView{
+  border: 3rpx solid #86ff9c;
 }
 
 .butView{
+  margin-top: 25rpx;
   display: flex;
 }
 
 .btn1{
   padding:5rpx;
   background-color: #86ff9c;
+}
+
+.card {
+  margin: 10rpx auto !important;
+}
+
+.content {
+  margin-top: 15rpx;
+  color: black;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.avter-content {
+  margin-top: 10rpx;
+  color: #333;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }

@@ -4,8 +4,11 @@
     体质测试报告
   </view>
 </view>
-<view wx:for="{{paperList}}">
-  <navigator class="health_item" url="/pages/method_testpaper_info/method_testpaper_info?type={{item.type}}" hover-class="navigator-hover">  
+<view wx:if="{{paperList== undefined ||  paperList.length == 0}}">
+  <view class="info">您目前还没有进行体质测试或你不属于该体质!</view>
+</view>
+<view wx:for="{{paperList}}" wx:if="{{paperList}}">
+  <navigator class="health_item" url="/pages/method_testpaper_info/method_testpaper_info?type={{item.type}}" hover-class="none">  
     <l-card type="primary"
             plaintext="{{true}}"
             title="{{index+1}}. {{item.type}}测试">

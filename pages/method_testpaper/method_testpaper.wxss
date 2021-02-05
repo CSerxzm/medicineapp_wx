@@ -26,3 +26,9 @@
   padding:20rpx;
   text-align:center;
 }
+
+.info{
+  font-size:26rpx;
+  padding:20rpx;
+  text-align:center;
+}

@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/forum_index/forum_index",
+    "pages/method_index/method_index",
     "pages/method_bodytest/method_bodytest",
+    "pages/forum_index/forum_index",
     "pages/personal_info/personal_info",
     "pages/index/index",
     "pages/method_testpaper_info/method_testpaper_info",
     "pages/method_testpaper/method_testpaper",
     "pages/personal_changepass/personal_changepass",
     "pages/health_index/health_index",
-    "pages/method_index/method_index",
     "pages/method_bodytest_info/method_bodytest_info",
     "pages/index_regist/index_regist",
     "pages/forum_add/forum_add",

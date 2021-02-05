@@ -1,6 +1,6 @@
-<view>
-  <navigator wx:for="{{questiontype}}" url="/pages/method_bodytest_info/method_bodytest_info?type={{item.type}}" hover-class="navigator-hover">
-    <l-card type="primary" plaintext="{{true}}">
+<view class="body">
+    <l-card class="card" type="primary" wx:for="{{questiontype}}"  plaintext="{{true}}" >
+      <navigator hover-class="none" url="/pages/method_bodytest_info/method_bodytest_info?type={{item.type}}">
         <view class="content">
           中医九种体质测试之{{item.type}}测试
         </view>
@@ -10,6 +10,6 @@
               <view class="number">{{item.views}}浏览</view>
           </view>
         </view>
+      </navigator>
     </l-card>
-  </navigator>
 </view>

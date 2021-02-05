@@ -1,111 +1,10 @@
-/* pages/forum/forum.wxss */
-.all {
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  border-radius: 20rpx;
-  border: 3rpx solid #E0E3DA;
-  box-shadow:5rpx 5rpx 5rpx 5rpx #E0E3DA;
-  background-color: #ffffff;
-  margin: 30rpx;
-  /* padding使得文字和图片不至于贴着边框 */
-  padding: 20rpx;
-}
 
-.head{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 80rpx;
-}
-
-/* 图片 */
-.image_head{
-  width: 80rpx;
-  height: 80rpx;
-}
-
-.nameandtime{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10rpx;
-  padding: 2rpx;
-}
-
-.name {
-  width: 500rpx;
-  margin-left: 25rpx;
-  font-size: 32rpx;
-  font-weight: bold;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.time {
-  font-size: 25rpx;
-  padding-left: 30rpx;
-  word-break: break-all;
-  color: #7a7878;
-}
 /*分割线*/
 .line{
  margin-top: 10rpx;
  background: #86ff9c;
  width:100%;
  height: 4rpx;
-}
-/*正文部分*/
-.content{
-  width: 100%;
-  margin-top: 20rpx;
-  display: -webkit-box;
-  font-size:35rpx;
-  overflow:hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp:3;
-  display: -webkit-box;
-  text-overflow:ellipsis;
-}
-/*尾部部分*/
-.footer{
-  width:100%;
-  margin-top:25rpx;
-  display: flex;
-  flex-direction: row;
-}
-
-.biaoqian_view{
-  width:1800rpx;
-  height:60rpx;
-  font-size: 35rpx;
-  display: flex;
-  text-align: center;
-  justify-content: left;
-  margin-left: 20rpx;
-}
-
-#biaoqian{
-  width:100%;
-  height:100%;
-  font-size: 60rpx;
-  color: #86ff9c;
-}
-
-.liulan_view{
-  width:1200rpx;
-  height:60rpx;
-  font-size: 35rpx;
-  display: flex;
-  text-align: center;
-  justify-content: left;
-  margin-left: 300rpx;
-}
-
-#liulan{
-  width:100%;
-  height:100%;
-  font-size: 60rpx;
-  color: #86ff9c;
 }
 
 /*发布动态界面*/
@@ -122,4 +21,60 @@
   height: 80rpx;
   font-size: 80rpx;
   color: coral;
+}
+
+.content-name {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(69, 82, 107, 1);
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+.card {
+  margin: 10rpx auto !important;
+}
+
+.content {
+  margin-top: 15rpx;
+  color: black;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.avter-content {
+  margin-top: 10rpx;
+  color: #333;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.avter-share-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.like-container{
+  width:150rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top:15rpx;
+  margin-left: 40rpx;
+  align-items: center
+}
+
+.number{
+  color: #666;
+  font-size: 28rpx;
+  margin-left: 12rpx;
 }

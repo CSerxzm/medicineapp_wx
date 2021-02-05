@@ -1,35 +1,25 @@
 <wxs module="filter" src="../../utils/util.wxs"></wxs>
 <block wx:for="{{forumList}}" wx:key="index">
   <navigator url="/pages/forum_comment/forum_comment?id={{item.id}}">
-    <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
-    <view class="all" id="{{index}}">
-        <view class="head">
-          <image class="image_head" src="{{item.user.image}}" />
-          <!-- 包裹两行文字 -->
-          <view class="nameandtime">
-            <text class="name">{{item.user.name}}</text>
-            <text class="time">{{filter.getDateTime(item.editTime)}}</text>
-          </view>
-        </view>
+    <!-- avatar -->
+    <l-card type="avatar" l-class="card" image="{{item.user.image}}"
+    title="{{item.user.name}}" describe="{{filter.getDateTime(item.editTime)}}">
         <view class="line"></view>
-        <view class="content">
-          <text>{{item.content}}</text>
+        <!-- 此处为content -->
+        <view class="avter-content">
+          {{item.content}}
         </view>
-        <view class="footer">
-          <view class="biaoqian_view">
-            <view>
-              <image id="biaoqian" mode="aspectFill" class="iconfont icon-biaoqian"/>
-            </view>
-            <view>{{item.keyword}}</view>
-          </view>
-          <view class="liulan_view">
-            <view>
-              <image id="liulan" mode="aspectFill" class="iconfont icon-pinglun"/>
-            </view>
-            <view>{{item.comments}}</view>
-          </view>
+        <view class="avter-share-container">
+        <view class="like-container">
+            <l-icon name="favor" color="#666" size="28" />
+            <view class="number">{{item.keyword}}</view>
         </view>
-      </view>
+        <view class="like-container">
+            <l-icon name="comment" color="#666" size="28" />
+            <view class="number">{{item.comments}}</view>
+        </view>
+        </view>
+    </l-card>
   </navigator>
 </block>
 
