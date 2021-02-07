@@ -22,7 +22,7 @@
     <l-tag shape="circle" bg-color="#86ff9c">系统建议</l-tag>
   </view>
   <view class="text">
-    <span class="boldtext">体质特征：</span>{{testresult.character}}
+    <span class="boldtext">体质特征：</span>{{testresult.feature}}
   </view>
   <view class="text">
     <span class="boldtext">形成原因：</span>{{testresult.reason}}
