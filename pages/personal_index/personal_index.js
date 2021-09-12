@@ -2,7 +2,7 @@ var _app = getApp()
 Page({
   data: {
     user:{"authority":"测试","constellation":"天蝎座",
-      "image":"http://47.102.155.48:8080/pic_medicineapp/head1.png",
+      "image":"http://localhost:8080/pic_medicineapp/head1.png",
       "name":"root","password":"password"
     }
   },

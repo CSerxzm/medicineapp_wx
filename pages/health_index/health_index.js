@@ -10,17 +10,17 @@ Page({
     menus:[
       {
         "name":"节气养生",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/jiqi.png',
+        "src":'http://localhost:8080/pic_medicineapp/jiqi.png',
         "url":"/pages/health_jieqi/health_jieqi"
       },
       {
         "name":"四季养生",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/siji.png',
+        "src":'http://localhost:8080/pic_medicineapp/siji.png',
         "url":"/pages/health_siji/health_siji"
       },
       {
         "name":"人群养生",
-        "src":'https://fuyuanplant.cn/pic_medicineapp/renqun.png',
+        "src":'http://localhost:8080/pic_medicineapp/renqun.png',
         "url":"/pages/health_renqun/health_renqun"
       }
     ],
@@ -28,7 +28,7 @@ Page({
       update: '',
       basic:{},
       today:{},
-      todyIcon:'https://fuyuanplant.cn/pic_medicineapp/weather/100.png',
+      todyIcon:'http://localhost:8080/pic_medicineapp/weather/100.png',
     },
     xinzuo:{
         "date":20200828,
@@ -41,7 +41,7 @@ Page({
         "work":"80",
         "money":"80",
         "number":7,
-        "summary":"今天狮子座别忘了跟你身边的小伙伴联络感情哦，如果有机会一起短途的旅行也会给你带来新的活力。跟伴侣的相处也会给你带来踏实稳定的感觉。",
+        "summary":"",
         "all":"80",
         "resultcode":"200",
         "error_code":0,
@@ -97,7 +97,7 @@ Page({
   getWeatherInfo: function (latitude, longitude){
     var _this = this;
     var key = 'f574bf1fb2784cacacc7fb15ebca5097';
-    var url = 'https://free-api.heweather.com/s6/weather?key='+key+'&location=' + longitude + ',' + latitude;
+    var url = 'http://free-api.heweather.com/s6/weather?key='+key+'&location=' + longitude + ',' + latitude;
       wx.request({
         url: url, 
         data: {},
@@ -110,7 +110,7 @@ Page({
               update:update,
               basic:basic,
               today:daily_forecast_today,
-              todyIcon:'https://fuyuanplant.cn/pic_medicineapp/weather/' + daily_forecast_today.cond_code_d+'.png'
+              todyIcon:'http://localhost:8080/pic_medicineapp/weather/' + daily_forecast_today.cond_code_d+'.png'
             }
           });
         }

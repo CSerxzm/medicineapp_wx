@@ -34,6 +34,6 @@ App({
     })
   },
   globalData: {
-    BASEURL:"https://fuyuanplant.cn/medicineapp"
+    BASEURL:"http://localhost:8080/medicineapp"
   }
 })
